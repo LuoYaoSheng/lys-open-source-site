@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { featuredProjects, roadmap, siteMeta, weeklyEntries } from '../data/site';
+---
+
+<BaseLayout title="lys Open Source System">
+  <section class="hero">
+    <div class="hero-main">
+      <span class="eyebrow">Open Source System</span>
+      <h1>把仓库收口成一条清晰主线。</h1>
+      <p class="hero-copy">{siteMeta.subtitle}</p>
+      <p class="hero-copy">{siteMeta.heroNote}</p>
+      <div class="hero-grid">
+        <div class="metric">
+          <strong>主线项目</strong>
+          <span class="mono">Smart BLE / Open IoT Platform</span>
+        </div>
+        <div class="metric">
+          <strong>当前重点</strong>
+          <span class="mono">入口收口、网站上线、周更机制</span>
+        </div>
+        <div class="metric">
+          <strong>状态</strong>
+          <span class="mono">持续建设中</span>
+        </div>
+      </div>
+    </div>
+
+    <aside class="hero-side">
+      <div class="note-box">
+        <span class="eyebrow">旗舰项目</span>
+        <h3>Smart BLE</h3>
+        <p>多分支多模式的 BLE 工具家族，也是整个系统最容易传播和教学展开的入口。</p>
+      </div>
+      <div class="note-box">
+        <span class="eyebrow">系统主核</span>
+        <h3>Open IoT Platform</h3>
+        <p>连接服务端、移动端、固件、发布包装层的 IoT 平台主系统。</p>
+      </div>
+    </aside>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Featured</span>
+        <h2>当前主推项目</h2>
+      </div>
+    </div>
+    <div class="section-grid">
+      {featuredProjects.map((project) => <ProjectCard {...project} />)}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Recent</span>
+        <h2>最近更新</h2>
+      </div>
+    </div>
+    <div class="section-grid">
+      {weeklyEntries.map((entry) => (
+        <article class="weekly-card">
+          <div class="project-meta">
+            <span class="status-chip">{entry.date}</span>
+          </div>
+          <h3>{entry.title}</h3>
+          <p>{entry.summary}</p>
+          <p class="mono">Next: {entry.next}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-grid">
+      <article class="roadmap-card">
+        <span class="eyebrow">Roadmap</span>
+        <h2>{roadmap.quarter}</h2>
+        <p>{roadmap.theme}</p>
+        <ul class="list">
+          {roadmap.inProgress.map((item) => <li>{item}</li>)}
+        </ul>
+      </article>
+
+      <article class="about-card">
+        <span class="eyebrow">About</span>
+        <h2>这不是作品集。</h2>
+        <p>这是一个持续建设中的公开工作台，用来把主线项目、工具仓库、周更记录和个人品牌绑定到同一个入口里。</p>
+        <a href="/about">Read more</a>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

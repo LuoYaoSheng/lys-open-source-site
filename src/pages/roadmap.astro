@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { roadmap } from '../data/site';
+---
+
+<BaseLayout title="Roadmap | lys Open Source System">
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Roadmap</span>
+        <h1>{roadmap.quarter}</h1>
+      </div>
+    </div>
+
+    <div class="section-grid">
+      <article class="section-card">
+        <span class="eyebrow">Theme</span>
+        <h2>{roadmap.theme}</h2>
+      </article>
+      <article class="section-card">
+        <span class="eyebrow">In Progress</span>
+        <ul class="list">
+          {roadmap.inProgress.map((item) => <li>{item}</li>)}
+        </ul>
+      </article>
+      <article class="section-card">
+        <span class="eyebrow">Planned</span>
+        <ul class="list">
+          {roadmap.planned.map((item) => <li>{item}</li>)}
+        </ul>
+      </article>
+      <article class="section-card">
+        <span class="eyebrow">Done</span>
+        <ul class="list">
+          {roadmap.done.map((item) => <li>{item}</li>)}
+        </ul>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

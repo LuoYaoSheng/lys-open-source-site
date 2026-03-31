@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { weeklyEntries } from '../data/site';
+---
+
+<BaseLayout title="Weekly | lys Open Source System">
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Weekly</span>
+        <h1>公开周更</h1>
+      </div>
+    </div>
+
+    <div class="section-grid">
+      {weeklyEntries.map((entry) => (
+        <article class="weekly-card">
+          <div class="project-meta">
+            <span class="status-chip">{entry.date}</span>
+          </div>
+          <h3>{entry.title}</h3>
+          <p>{entry.summary}</p>
+          <p class="mono">Next: {entry.next}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

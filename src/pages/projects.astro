@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { projectGroups } from '../data/site';
+---
+
+<BaseLayout title="Projects | lys Open Source System">
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Projects</span>
+        <h1>项目地图</h1>
+      </div>
+    </div>
+
+    {projectGroups.map((group) => (
+      <section class="section" id={group.items[0]?.id}>
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">{group.title}</span>
+            <h2>{group.title}</h2>
+          </div>
+        </div>
+        <div class="section-grid">
+          {group.items.map((item) => <ProjectCard {...item} />)}
+        </div>
+      </section>
+    ))}
+  </section>
+</BaseLayout>
