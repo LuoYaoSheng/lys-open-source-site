@@ -221,23 +221,23 @@ export const learnerPromises = [
 export const downloadEntries = [
   {
     title: 'Smart BLE 小程序体验',
-    label: 'QR Placeholder',
-    summary: '这里先放微信小程序二维码占位。后续替换成真实小程序码，用户可以直接扫码开始体验。',
+    label: '微信小程序码',
+    summary: '直接扫码体验 Smart BLE 小程序。最适合先感受 BLE 调试工具到底解决了什么问题。',
     image: '/placeholders/smart-ble-qr.jpg',
     href: 'https://gitee.com/luoyaosheng/lys-smart-ble',
     action: 'Open Smart BLE'
   },
   {
-    title: 'Open IoT Platform APK / 固件',
-    label: 'Download Placeholder',
-    summary: '这里先放 APK、固件和发布页入口占位。后续可替换成真实下载链接或版本页入口。',
-    image: '/placeholders/download-open-iot.svg',
+    title: 'Open IoT Platform 体验入口',
+    label: '项目二维码',
+    summary: '这里先放现成的二维码入口，后续再继续补真实 APK、固件和发布页下载位。',
+    image: '/placeholders/open-iot-platform-qr.jpg',
     href: 'https://gitee.com/luoyaosheng/lys-iot-platform',
     action: 'Open Platform'
   },
   {
     title: 'PaperMD / RedisPilot 下载位',
-    label: 'Release Placeholder',
+    label: '下载入口预留',
     summary: '桌面工具后续可以在这里给出 dmg、zip、安装包或 Release 页面入口。',
     image: '/placeholders/releases-stack.svg',
     href: '/projects',
