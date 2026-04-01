@@ -305,6 +305,14 @@ export const projectGroups = [
         bestFor: '想学 SSH 工作台、SFTP、端口转发和 Runbook 的人'
       },
       {
+        name: 'CodexSwitch',
+        id: 'codex-switch',
+        status: '公开中',
+        summary: '本地优先的 Codex 配置切换与诊断工具，适合管理多套模型配置。',
+        repo: 'https://gitee.com/luoyaosheng/lys-codex-switch',
+        bestFor: '想学本地配置切换、开发者 CLI 工具和 AI 协作工作流的人'
+      },
+      {
         name: 'MCP DB Gateway',
         id: 'db-gateway',
         status: '公开中',
