@@ -9,7 +9,7 @@ export const featuredProjects = [
     name: 'Smart BLE',
     slug: 'smart-ble',
     category: '核心主线',
-    summary: '跨平台 BLE 调试工具，也是学习 BLE、对比多平台实现和理解协议最合适的入口。',
+    summary: '跨平台 BLE 调试工具；微信小程序当前名称为 BLE Toolkit+，也是学习 BLE、对比多平台实现和理解协议最合适的入口。',
     repo: 'https://gitee.com/luoyaosheng/lys-smart-ble',
     docs: '/projects#smart-ble',
     status: '先从这里学',
@@ -30,7 +30,7 @@ export const featuredProjects = [
 export const startHere = [
   {
     title: '我想先体验 BLE 工具',
-    text: '先从 Smart BLE 小程序码开始。它最适合先体验，再反过来理解 BLE 扫描、连接和协议。',
+    text: '先从 BLE Toolkit+（Smart BLE 小程序版）开始。它最适合先体验，再反过来理解 BLE 扫描、连接和协议。',
     href: 'https://gitee.com/luoyaosheng/lys-smart-ble'
   },
   {
@@ -93,7 +93,7 @@ export const learnTracks = [
     duration: '30-90 分钟',
     outcome: '理解 BLE 调试最基本的扫描、连接、读写与多平台实现差异。',
     steps: [
-      '先扫码体验 Smart BLE 小程序',
+      '先扫码体验 BLE Toolkit+（Smart BLE 小程序版）',
       '再看 5 分钟快速上手',
       '再看 BLE FAQ 和平台对比',
       '最后回到仓库看实现'
@@ -220,9 +220,9 @@ export const learnerPromises = [
 
 export const downloadEntries = [
   {
-    title: 'Smart BLE 小程序体验',
-    label: '微信小程序码',
-    summary: '直接扫码体验 Smart BLE 小程序。最适合先感受 BLE 调试工具到底解决了什么问题。',
+    title: 'BLE Toolkit+ 小程序体验',
+    label: 'Smart BLE 小程序版',
+    summary: '直接扫码体验 BLE Toolkit+。它是 Smart BLE 最适合第一次进入的体验入口。',
     image: '/placeholders/smart-ble-qr.jpg',
     href: 'https://gitee.com/luoyaosheng/lys-smart-ble',
     action: 'Open Smart BLE'
@@ -360,7 +360,7 @@ export const projectGroups = [
         name: 'LightBLE',
         id: 'lightble',
         status: '历史入口',
-        summary: 'Smart BLE 的历史 uni-app / LightBLE 线。',
+        summary: 'Smart BLE 的历史命名与旧 uni-app 仓库线，当前主入口已统一到 lys-smart-ble。',
         repo: 'https://gitee.com/luoyaosheng/lys-smart-ble',
         bestFor: '查看项目历史与教学演进'
       },
@@ -385,6 +385,12 @@ export const projectGroups = [
 ];
 
 export const weeklyEntries = [
+  {
+    title: 'W14：把 Smart BLE 和网站一起收口成学习者入口',
+    date: '2026-04-01',
+    summary: '本周重点从“继续整理仓库”切到“让学习者真正能进入”。已经补了 Smart BLE 命名指南、学习入口文档骨架、素材清单和周更草稿。',
+    next: '继续补第一批真实截图和 GIF，再把它们接进网站首页和学习路径。'
+  },
   {
     title: '仓库入口收口',
     date: '2026-03-31',

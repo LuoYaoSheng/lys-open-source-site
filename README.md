@@ -41,10 +41,17 @@
 当前内容主要来自：
 
 - `smart-ble/README.md`
+- `smart-ble/docs/START_HERE.md`
 - `smart-ble/docs/wechat-articles/`
 - `smart-ble/docs/promotion/articles/`
 - `open-iot-platform/README.md`
 - 顶层规划文档
+
+## 命名说明
+
+- `Smart BLE`：总项目名
+- `BLE Toolkit+`：Smart BLE 小程序版当前对外名称
+- `LightBLE`：历史命名 / 历史仓库线
 
 ## 开发
 
