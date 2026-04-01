@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="960" viewBox="0 0 960 960" fill="none">
+  <rect width="960" height="960" rx="48" fill="#F6EFE2"/>
+  <rect x="86" y="110" width="788" height="658" rx="28" fill="#FFF9F1" stroke="#D3C5B4" stroke-width="8"/>
+  <rect x="150" y="176" width="660" height="84" rx="18" fill="#17120F"/>
+  <rect x="150" y="304" width="302" height="182" rx="24" fill="#9F2F16"/>
+  <rect x="508" y="304" width="302" height="182" rx="24" fill="#245E4F"/>
+  <rect x="150" y="532" width="660" height="168" rx="24" fill="#F1D0C4"/>
+  <path d="M480 350V560" stroke="#FFF9F1" stroke-width="44" stroke-linecap="round"/>
+  <path d="M382 464L480 562L578 464" stroke="#FFF9F1" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="301" y="410" text-anchor="middle" fill="#FFF9F1" font-family="IBM Plex Sans, sans-serif" font-size="38" font-weight="700">APK</text>
+  <text x="659" y="410" text-anchor="middle" fill="#FFF9F1" font-family="IBM Plex Sans, sans-serif" font-size="38" font-weight="700">FIRMWARE</text>
+  <text x="480" y="618" text-anchor="middle" fill="#17120F" font-family="IBM Plex Sans, sans-serif" font-size="34" font-weight="700">Download Placeholder</text>
+  <text x="480" y="878" text-anchor="middle" fill="#9F2F16" font-family="IBM Plex Sans, sans-serif" font-size="40" font-weight="700">Open IoT Platform Releases</text>
+</svg>

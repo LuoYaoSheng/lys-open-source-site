@@ -1,42 +1,46 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
-import { featuredProjects, roadmap, siteMeta, weeklyEntries } from '../data/site';
+import { downloadEntries, featuredProjects, learnerSections, learningHighlights, roadmap, siteMeta, startHere, trustSignals, weeklyEntries } from '../data/site';
 ---
 
 <BaseLayout title="lys Open Source System">
   <section class="hero">
     <div class="hero-main">
-      <span class="eyebrow">Open Source System</span>
-      <h1>把仓库收口成一条清晰主线。</h1>
+      <span class="eyebrow">Learn from real open-source projects</span>
+      <h1>先体验，再学习，再读源码。</h1>
       <p class="hero-copy">{siteMeta.subtitle}</p>
       <p class="hero-copy">{siteMeta.heroNote}</p>
+      <div class="cta-row">
+        <a class="button-primary" href="#download">先看体验入口</a>
+        <a class="button-secondary" href="#learning">先看学习路径</a>
+      </div>
       <div class="hero-grid">
         <div class="metric">
-          <strong>主线项目</strong>
-          <span class="mono">Smart BLE / Open IoT Platform</span>
+          <strong>适合谁</strong>
+          <span class="mono">BLE / IoT 学习者、创客、独立开发者</span>
         </div>
         <div class="metric">
-          <strong>当前重点</strong>
-          <span class="mono">入口收口、网站上线、周更机制</span>
+          <strong>这里先给你</strong>
+          <span class="mono">体验入口 / 学习路径 / 值得先看的项目</span>
         </div>
         <div class="metric">
-          <strong>状态</strong>
-          <span class="mono">持续建设中</span>
+          <strong>再往下</strong>
+          <span class="mono">教程 / 对照实现 / 源码 / 历史演进</span>
         </div>
       </div>
     </div>
 
     <aside class="hero-side">
       <div class="note-box">
-        <span class="eyebrow">旗舰项目</span>
+        <span class="eyebrow">最适合先上手</span>
         <h3>Smart BLE</h3>
-        <p>多分支多模式的 BLE 工具家族，也是整个系统最容易传播和教学展开的入口。</p>
+        <p>如果你是第一次接触这个站点，先从它开始。它最容易体验，也最容易把 BLE 学习路径讲清楚。</p>
       </div>
       <div class="note-box">
-        <span class="eyebrow">系统主核</span>
+        <span class="eyebrow">适合继续深入</span>
         <h3>Open IoT Platform</h3>
-        <p>连接服务端、移动端、固件、发布包装层的 IoT 平台主系统。</p>
+        <p>当你开始关心配网、MQTT、设备管理和服务端之后，再从这里继续往下学完整链路。</p>
       </div>
     </aside>
   </section>
@@ -44,8 +48,120 @@ import { featuredProjects, roadmap, siteMeta, weeklyEntries } from '../data/site
   <section class="section">
     <div class="section-head">
       <div>
+        <span class="eyebrow">What You Can Learn</span>
+        <h2>这不是一个方向很杂的站，而是三条清晰学习线</h2>
+      </div>
+    </div>
+    <div class="section-grid">
+      {learnerSections.map((item) => (
+        <article class="section-card focus-card">
+          <h3>{item.title}</h3>
+          <p>{item.summary}</p>
+          <p class="focus-emphasis">{item.emphasis}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section" id="download">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Try Now</span>
+        <h2>先体验，不用先读长文</h2>
+        <p>如果你只是想知道这些项目值不值得学，先扫码、先下载、先点开仓库入口。感受到了价值，再往下走。</p>
+      </div>
+    </div>
+    <div class="download-grid">
+      {downloadEntries.map((entry) => (
+        <article class="download-card">
+          <div class="download-visual">
+            <img src={entry.image} alt={entry.title} loading="lazy" />
+          </div>
+          <div class="project-meta">
+            <span class="status-chip">{entry.label}</span>
+          </div>
+          <h3>{entry.title}</h3>
+          <p>{entry.summary}</p>
+          <a href={entry.href} target={entry.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer">{entry.action}</a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section" id="learning">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Learning Path</span>
+        <h2>如果你是来学习的，按这条路走</h2>
+        <p>不需要一上来就理解仓库结构。先从体验和文章开始，再逐步进入代码与实现。</p>
+      </div>
+    </div>
+    <div class="section-grid">
+      {learningHighlights.map((item, index) => (
+        <article class="section-card step-card">
+          <span class="step-index">0{index + 1}</span>
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
+        </article>
+      ))}
+    </div>
+    <div class="cta-row">
+      <a class="button-primary" href="/learn">进入 Learn</a>
+      <a class="button-secondary" href="/articles">看文章入口</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Read Next</span>
+        <h2>不想自己找文章，就从这里开始</h2>
+        <p>把“先看什么”直接给你，减少第一次进入时的判断成本。</p>
+      </div>
+    </div>
+    <div class="section-grid">
+      <article class="section-card">
+        <h3>第一次了解 Smart BLE</h3>
+        <p>先去看 “为什么选择 Smart BLE” 和 “5 分钟上手”，先建立认知，再决定要不要继续学实现。</p>
+        <a href="/articles">去看文章</a>
+      </article>
+      <article class="section-card">
+        <h3>想系统学 BLE / IoT</h3>
+        <p>先走 Learn 页面，把体验入口、教程入口和仓库入口按顺序串起来。</p>
+        <a href="/learn">进入 Learn</a>
+      </article>
+      <article class="section-card">
+        <h3>想直接看项目</h3>
+        <p>如果你已经知道自己要什么，直接去 Projects 页面挑项目也行。</p>
+        <a href="/projects">浏览项目</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Start Here</span>
+        <h2>不知道从哪里开始？按你的学习目标进入</h2>
+      </div>
+    </div>
+    <div class="section-grid">
+      {startHere.map((item) => (
+        <article class="section-card">
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
+          <a href={item.href}>Open</a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
         <span class="eyebrow">Featured</span>
-        <h2>当前主推项目</h2>
+        <h2>这两条主线最值得先看</h2>
+        <p>如果你只想先学两件最重要的东西，就从 Smart BLE 和 Open IoT Platform 开始。</p>
       </div>
     </div>
     <div class="section-grid">
@@ -56,8 +172,25 @@ import { featuredProjects, roadmap, siteMeta, weeklyEntries } from '../data/site
   <section class="section">
     <div class="section-head">
       <div>
+        <span class="eyebrow">Why trust this</span>
+        <h2>它不是只摆仓库名的学习站</h2>
+      </div>
+    </div>
+    <div class="section-grid">
+      {trustSignals.map((item) => (
+        <article class="section-card">
+          <p>{item}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
         <span class="eyebrow">Recent</span>
-        <h2>最近更新</h2>
+        <h2>最近到底在推进什么</h2>
+        <p>不是“未来某天会做”，而是已经收口、已经构建、已经公开、你现在就能跟进去的部分。</p>
       </div>
     </div>
     <div class="section-grid">
@@ -83,12 +216,13 @@ import { featuredProjects, roadmap, siteMeta, weeklyEntries } from '../data/site
         <ul class="list">
           {roadmap.inProgress.map((item) => <li>{item}</li>)}
         </ul>
+        <a href="/roadmap">See full roadmap</a>
       </article>
 
       <article class="about-card">
         <span class="eyebrow">About</span>
-        <h2>这不是作品集。</h2>
-        <p>这是一个持续建设中的公开工作台，用来把主线项目、工具仓库、周更记录和个人品牌绑定到同一个入口里。</p>
+        <h2>为什么这个站存在</h2>
+        <p>为了让学习者先找到能体验、能理解、能跟进的入口，而不是先被仓库结构和规划文档淹没。</p>
         <a href="/about">Read more</a>
       </article>
     </div>

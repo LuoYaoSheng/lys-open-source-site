@@ -165,6 +165,35 @@ p {
   font-size: 1.05rem;
 }
 
+.cta-row {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin-top: 1.4rem;
+}
+
+.button-primary,
+.button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.8rem;
+  padding: 0 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.button-primary {
+  background: var(--ink);
+  color: #fff7ef;
+}
+
+.button-secondary {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--ink);
+}
+
 .hero-grid {
   display: grid;
   gap: 1rem;
@@ -193,6 +222,23 @@ p {
   color: #245e4f;
 }
 
+.meta-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.9rem;
+}
+
+.meta-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(22, 18, 15, 0.08);
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
 .hero-stack {
   display: grid;
   gap: 0.9rem;
@@ -217,27 +263,100 @@ p {
   margin-bottom: 1rem;
 }
 
+.section-head p {
+  max-width: 42rem;
+  margin-top: 0.75rem;
+}
+
+.page-intro {
+  margin-bottom: 1.5rem;
+}
+
+.page-intro h1 {
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  line-height: 0.98;
+}
+
+.learn-intro h1,
+.learn-intro p {
+  max-width: none;
+}
+
+@media (min-width: 1100px) {
+  .learn-intro h1,
+  .learn-intro p {
+    white-space: nowrap;
+  }
+}
+
 .section-grid {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
+.download-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.learn-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
 .project-card,
 .weekly-card,
 .roadmap-card,
 .about-card,
-.section-card {
+.section-card,
+.download-card {
   padding: 1.2rem;
   border-radius: 1.25rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
 }
 
 .project-card a,
-.weekly-card a {
+.weekly-card a,
+.section-card a,
+.roadmap-card a,
+.about-card a,
+.download-card a {
   display: inline-flex;
   margin-top: 1rem;
   color: var(--accent);
   font-weight: 600;
+}
+
+.download-visual {
+  display: grid;
+  place-items: center;
+  min-height: 210px;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  border: 1px dashed rgba(22, 18, 15, 0.2);
+  background: rgba(255, 255, 255, 0.72);
+  overflow: hidden;
+}
+
+.download-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.best-for {
+  margin-top: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.best-for strong {
+  color: var(--ink);
+  margin-right: 0.35rem;
 }
 
 .list {
@@ -246,6 +365,32 @@ p {
   margin: 0;
   display: grid;
   gap: 0.75rem;
+}
+
+.ordered-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.75rem;
+  color: var(--muted);
+}
+
+.ordered-list li {
+  padding-left: 0.25rem;
+  line-height: 1.7;
+}
+
+.ordered-list li span {
+  display: block;
+}
+
+.step-tag {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  color: var(--accent);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .list li {
@@ -257,9 +402,58 @@ p {
   border-bottom: none;
 }
 
+.link-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
 .mono {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.85rem;
+}
+
+.track-card,
+.article-card,
+.article-plan-card {
+  min-height: 100%;
+}
+
+.focus-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.focus-card::after {
+  content: '';
+  position: absolute;
+  inset: auto 1.2rem 1.2rem 1.2rem;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.focus-emphasis {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.step-card {
+  position: relative;
+}
+
+.weekly-card,
+.roadmap-card,
+.about-card {
+  min-height: 100%;
+}
+
+.step-index {
+  display: inline-flex;
+  margin-bottom: 0.8rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.1rem;
+  color: var(--accent);
 }
 
 @media (max-width: 900px) {

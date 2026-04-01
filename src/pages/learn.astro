@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { learnTracks } from '../data/site';
+---
+
+<BaseLayout title="Learn | lys Open Source System">
+  <section class="section">
+    <div class="section-head page-intro learn-intro">
+      <div>
+        <span class="eyebrow">Learn</span>
+        <h1>先跟着真实项目学，再回头理解概念。</h1>
+        <p>学习顺序很简单：先体验，再理解，再看实现。</p>
+      </div>
+    </div>
+
+    {learnTracks.map((track) => (
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">{track.title}</span>
+            <h2>{track.title}</h2>
+            <p>{track.audience}</p>
+          </div>
+        </div>
+        <div class="learn-grid">
+          <article class="section-card track-card">
+            <div class="meta-row">
+              <span class="status-chip">{track.level}</span>
+              <span class="meta-pill">{track.duration}</span>
+            </div>
+            <h3>学完之后你会得到什么</h3>
+            <p>{track.outcome}</p>
+          </article>
+          <article class="section-card track-card">
+            <h3>学习步骤</h3>
+            <ol class="ordered-list">
+              {track.steps.map((step, index) => (
+                <li>
+                  <strong class="step-tag">Step {index + 1}</strong>
+                  <span>{step}</span>
+                </li>
+              ))}
+            </ol>
+          </article>
+          <article class="section-card track-card">
+            <h3>这条路线适合谁</h3>
+            <p>{track.audience}</p>
+            <p class="mono">建议顺序：先用入口，再读文章，最后回仓库看实现。</p>
+          </article>
+          <article class="section-card track-card">
+            <h3>对应入口</h3>
+            <ul class="list">
+              {track.links.map((link) => (
+                <li class="link-row">
+                  <strong>{link.label}</strong>
+                  <a href={link.href} target="_blank" rel="noreferrer">Open</a>
+                </li>
+              ))}
+            </ul>
+          </article>
+        </div>
+      </section>
+    ))}
+  </section>
+</BaseLayout>
