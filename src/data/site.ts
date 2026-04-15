@@ -1,7 +1,13 @@
 export const siteMeta = {
   title: '从真实开源项目学习 BLE 与 IoT',
   subtitle: '这里不是仓库目录，而是一条围绕真实开源项目展开的学习入口。',
-  heroNote: '先体验，再看教程，再读源码。让学习路径比仓库结构更清楚。'
+  heroNote: '先体验，再看教程，再读源码。让学习路径比仓库结构更清楚。',
+  // SEO 元数据
+  siteUrl: 'https://open.i2kai.com',
+  siteName: 'lys Open Source System',
+  author: 'LuoYaoSheng',
+  keywords: '开源项目, BLE, IoT, 智能家居, 物联网, 学习路径, Smart BLE, Open IoT Platform, RedisPilot, MQTT, BLE配网',
+  themeColor: '#646cff',
 };
 
 export const featuredProjects = [
