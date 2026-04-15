@@ -336,8 +336,10 @@ export const projectGroups = [
         name: 'Batch Image Studio',
         id: 'image-studio',
         status: '公开中',
-        summary: '图片批量处理工具，用于项目素材与发布图生产。',
+        summary: 'AI 驱动的图片批量处理工具，用于项目素材与发布图生产。',
         repo: 'https://gitee.com/luoyaosheng/lys-image-studio',
+        github: 'https://github.com/LuoYaoSheng/batch-image-studio',
+        docs: 'https://batch.open.i2kai.com',
         bestFor: '想学素材制作和图片批处理的人'
       },
       {
