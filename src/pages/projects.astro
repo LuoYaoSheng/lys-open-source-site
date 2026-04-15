@@ -4,11 +4,10 @@ import '../styles/doc.css';
 import { projectGroups } from '../data/site';
 ---
 
-<DocLayout title="Projects | lys Open Source System">
-  <h1>Projects</h1>
+<DocLayout title="项目 | lys 开源项目集合">
+  <h1>项目</h1>
   <p>
-    All open-source projects organized by category. Each project links to its repository
-    and provides a brief description of its purpose and current status.
+    所有开源项目按类别组织。每个项目链接到其仓库，并提供简要描述和当前状态。
   </p>
 
   {projectGroups.map((group) => (
@@ -21,7 +20,7 @@ import { projectGroups } from '../data/site';
             <span class="status-chip">{item.status}</span>
             <h3>{item.name}</h3>
             <p>{item.summary}</p>
-            <a href={item.repo} target="_blank" rel="noreferrer">View Repository →</a>
+            <a href={item.repo} target="_blank" rel="noreferrer">查看仓库 →</a>
           </article>
         ))}
       </div>

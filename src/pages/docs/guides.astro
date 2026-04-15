@@ -4,11 +4,10 @@ import '../../styles/doc.css';
 import { guideCollections } from '../../data/site';
 ---
 
-<DocLayout title="Guides | lys Open Source System">
-  <h1>Guides</h1>
+<DocLayout title="技术指南 | lys 开源项目集合">
+  <h1>技术指南</h1>
   <p>
-    Technical articles covering BLE architecture, IoT platform design, hardware integration,
-    and cross-platform development patterns.
+    涵盖 BLE 架构、IoT 平台设计、硬件集成和跨平台开发模式的技术文章。
   </p>
 
   {guideCollections.map((collection) => (
@@ -25,7 +24,7 @@ import { guideCollections } from '../../data/site';
             </div>
             <h3>{item.title}</h3>
             <p>{item.summary}</p>
-            <a href={item.href} target="_blank" rel="noreferrer">Read →</a>
+            <a href={item.href} target="_blank" rel="noreferrer">阅读 →</a>
           </article>
         ))}
       </div>

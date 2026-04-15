@@ -4,11 +4,11 @@ import '../styles/doc.css';
 import { aboutContent } from '../data/site';
 ---
 
-<DocLayout title="About | lys Open Source System">
-  <h1>About</h1>
+<DocLayout title="关于 | lys 开源项目集合">
+  <h1>关于</h1>
   <p>{aboutContent.mission}</p>
 
-  <h2>Principles</h2>
+  <h2>原则</h2>
   {aboutContent.principles.map((principle) => (
     <div class="doc-section">
       <h3>{principle.title}</h3>

@@ -1,64 +1,64 @@
 // ── Site Metadata ──
 export const siteMeta = {
-  title: 'lys Open Source System',
-  description: 'A collection of open-source projects for BLE, IoT, and developer tools.',
+  title: 'lys 开源项目集合',
+  description: '开源 BLE、IoT 与开发者工具项目集合。',
   siteUrl: 'https://open.i2kai.com',
-  siteName: 'lys Open Source System',
+  siteName: 'lys Open Source',
   author: 'LuoYaoSheng',
-  keywords: 'open source, BLE, IoT, Smart BLE, Open IoT Platform, RedisPilot, MQTT, developer tools',
+  keywords: '开源, BLE, IoT, Smart BLE, Open IoT Platform, RedisPilot, MQTT, 开发者工具',
   themeColor: '#016FFF',
   repo: 'https://gitee.com/luoyaosheng',
   github: 'https://github.com/LuoYaoSheng',
 };
 
-// ── Navigation (English) ──
+// ── Navigation ──
 export const navItems = [
-  { label: 'Docs', href: '/docs/getting-started' },
-  { label: 'Projects', href: '/projects' },
-  { label: 'Changelog', href: '/changelog' },
-  { label: 'Roadmap', href: '/roadmap' },
-  { label: 'About', href: '/about' },
+  { label: '文档', href: '/docs/getting-started' },
+  { label: '项目', href: '/projects' },
+  { label: '更新日志', href: '/changelog' },
+  { label: '路线图', href: '/roadmap' },
+  { label: '关于', href: '/about' },
 ];
 
 // ── Sidebar Configuration ──
 export const sidebarConfig = [
   {
-    group: 'Documentation',
+    group: '文档',
     items: [
-      { label: 'Getting Started', href: '/docs/getting-started' },
-      { label: 'Guides', href: '/docs/guides' },
+      { label: '快速开始', href: '/docs/getting-started' },
+      { label: '技术指南', href: '/docs/guides' },
     ],
   },
-  { group: 'Project', items: [{ label: 'All Projects', href: '/projects' }] },
+  { group: '项目', items: [{ label: '全部项目', href: '/projects' }] },
   {
-    group: 'Community',
+    group: '社区',
     items: [
-      { label: 'Changelog', href: '/changelog' },
-      { label: 'Roadmap', href: '/roadmap' },
-      { label: 'About', href: '/about' },
+      { label: '更新日志', href: '/changelog' },
+      { label: '路线图', href: '/roadmap' },
+      { label: '关于', href: '/about' },
     ],
   },
 ];
 
-// ── Features (3 core projects) ──
+// ── Features（3 个核心项目） ──
 export const features = [
   {
     title: 'Smart BLE',
-    description: 'Cross-platform BLE debugging tool with multi-branch, multi-mode implementations. The primary entry point for learning BLE protocols and platform differences.',
+    description: '跨平台 BLE 调试工具，包含多分支、多模式的实现。是学习 BLE 协议和平台差异的主入口。',
     href: 'https://gitee.com/luoyaosheng/lys-smart-ble',
-    tag: 'Core',
+    tag: '核心',
   },
   {
     title: 'Open IoT Platform',
-    description: 'End-to-end IoT platform connecting server, mobile app, firmware, and release packaging. Covers BLE provisioning, MQTT, and device management.',
+    description: '端到端 IoT 平台，覆盖服务端、移动端、固件和发布包装。包含 BLE 配网、MQTT 和设备管理。',
     href: 'https://gitee.com/luoyaosheng/lys-iot-platform',
-    tag: 'Core',
+    tag: '核心',
   },
   {
-    title: 'Developer Tools',
-    description: 'RedisPilot, QueryLab, TermForge, and more — desktop tools for database management, SSH operations, and development workflows.',
+    title: '开发者工具',
+    description: 'RedisPilot、QueryLab、TermForge 等 — 数据库管理、SSH 运维和开发流程的桌面工具。',
     href: '/projects',
-    tag: 'Tools',
+    tag: '工具',
   },
 ];
 
@@ -66,81 +66,81 @@ export const features = [
 export const quickStart = {
   steps: [
     {
-      title: 'Try Smart BLE',
-      description: 'Start with the WeChat mini-program (BLE Toolkit+) to experience BLE scanning, connection, and data exchange firsthand.',
+      title: '体验 Smart BLE',
+      description: '从微信小程序（BLE Toolkit+）开始，直接体验 BLE 扫描、连接和数据交换。',
       href: 'https://gitee.com/luoyaosheng/lys-smart-ble',
     },
     {
-      title: 'Read the docs',
-      description: 'Explore guides on BLE abstraction design, platform comparisons, and ESP32 hardware integration.',
+      title: '阅读文档',
+      description: '了解 BLE 抽象层设计、平台对比和 ESP32 硬件集成等技术指南。',
       href: '/docs/getting-started',
     },
     {
-      title: 'Explore the codebase',
-      description: 'Dive into the source code to understand cross-platform implementation patterns and architecture decisions.',
+      title: '探索源码',
+      description: '深入了解跨平台实现模式和架构设计决策。',
       href: '/projects',
     },
   ],
 };
 
-// ── Guide Collections (formerly articleCollections) ──
+// ── Guide Collections ──
 export const guideCollections = [
   {
-    title: 'Getting Started',
-    intro: 'Understand what each project does and decide if it fits your needs.',
+    title: '入门阅读',
+    intro: '了解每个项目在做什么，判断是否符合你的需求。',
     items: [
       {
-        title: 'Why Smart BLE?',
-        summary: 'A quick overview of what Smart BLE solves and why it is worth exploring.',
-        level: 'Beginner',
-        readTime: '5-8 min',
-        tag: 'Overview',
+        title: '为什么选择 Smart BLE？',
+        summary: '快速了解 Smart BLE 解决了什么问题，为什么值得探索。',
+        level: '入门',
+        readTime: '5-8 分钟',
+        tag: '概览',
         href: 'https://gitee.com/luoyaosheng/lys-smart-ble/blob/refactor/multi-platform/docs/promotion/articles/008-%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9SmartBLE.md',
       },
       {
-        title: '5-Minute Quick Start',
-        summary: 'Get Smart BLE running and understand its core workflows in under five minutes.',
-        level: 'Beginner',
-        readTime: '5 min',
-        tag: 'Quick Start',
+        title: '5 分钟快速上手',
+        summary: '在五分钟内跑通 Smart BLE，理解核心工作流。',
+        level: '入门',
+        readTime: '5 分钟',
+        tag: '快速上手',
         href: 'https://gitee.com/luoyaosheng/lys-smart-ble/blob/refactor/multi-platform/docs/promotion/articles/005-5%E5%88%86%E9%92%9F%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8.md',
       },
       {
-        title: 'The Story Behind Smart BLE',
-        summary: 'How the project evolved from a simple BLE tool to a multi-platform learning reference.',
-        level: 'Beginner',
-        readTime: '8-10 min',
-        tag: 'Background',
+        title: 'Smart BLE 的项目故事',
+        summary: '从一个简单的 BLE 工具到多平台学习参考的演进历程。',
+        level: '入门',
+        readTime: '8-10 分钟',
+        tag: '背景',
         href: 'https://gitee.com/luoyaosheng/lys-smart-ble/blob/refactor/multi-platform/docs/promotion/articles/003-%E9%A1%B9%E7%9B%AE%E6%95%85%E4%BA%8B%E4%B8%BA%E4%BB%80%E4%B9%88%E5%81%9ASmartBLE.md',
       },
     ],
   },
   {
-    title: 'Deep Dives',
-    intro: 'Technical articles for understanding implementation details and architecture.',
+    title: '深入理解',
+    intro: '深入实现细节和架构设计的技术文章。',
     items: [
       {
-        title: 'Designing a Cross-Platform BLE Abstraction Layer',
-        summary: 'How Smart BLE abstracts platform differences into a unified interface.',
-        level: 'Advanced',
-        readTime: '12-15 min',
-        tag: 'Architecture',
+        title: '跨平台 BLE 抽象层设计',
+        summary: 'Smart BLE 如何将平台差异抽象为统一接口。',
+        level: '进阶',
+        readTime: '12-15 分钟',
+        tag: '架构',
         href: 'https://gitee.com/luoyaosheng/lys-smart-ble/blob/refactor/multi-platform/docs/promotion/articles/001-%E8%B7%A8%E5%B9%B3%E5%8F%B0BLE%E6%8A%BD%E8%B1%A1%E5%B1%82%E8%AE%BE%E8%AE%A1.md',
       },
       {
-        title: 'ESP32 BLE in Practice: Building a Bluetooth Device from Scratch',
-        summary: 'Hands-on guide covering hardware-side BLE implementation with ESP32.',
-        level: 'Advanced',
-        readTime: '15-20 min',
-        tag: 'Hardware',
+        title: 'ESP32 BLE 实战：从零搭建蓝牙设备',
+        summary: '使用 ESP32 进行硬件端 BLE 开发的实践指南。',
+        level: '进阶',
+        readTime: '15-20 分钟',
+        tag: '硬件',
         href: 'https://gitee.com/luoyaosheng/lys-smart-ble/blob/refactor/multi-platform/docs/promotion/articles/002-ESP32%E5%AE%9E%E6%88%98%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BA.md',
       },
       {
-        title: 'Comparing 8 Cross-Platform BLE Frameworks',
-        summary: 'An evaluation of different approaches to cross-platform BLE development.',
-        level: 'Advanced',
-        readTime: '12-18 min',
-        tag: 'Comparison',
+        title: '8 种跨平台 BLE 方案对比',
+        summary: '评估不同跨平台 BLE 开发方案的优劣。',
+        level: '进阶',
+        readTime: '12-18 分钟',
+        tag: '对比',
         href: 'https://gitee.com/luoyaosheng/lys-smart-ble/blob/refactor/multi-platform/docs/promotion/articles/004-8%E7%A7%8D%E5%B9%B3%E5%8F%B0%E5%AF%B9%E6%AF%94%E8%AF%84%E6%B5%8B.md',
       },
     ],
@@ -150,82 +150,82 @@ export const guideCollections = [
 // ── Project Groups ──
 export const projectGroups = [
   {
-    title: 'Core Projects',
-    intro: 'The primary projects for learning BLE and IoT development.',
+    title: '核心项目',
+    intro: '学习 BLE 和 IoT 开发的主要入口项目。',
     items: [
       {
         name: 'Smart BLE',
         id: 'smart-ble',
-        status: 'Active',
-        summary: 'Cross-platform BLE debugging tool with multiple implementation branches.',
+        status: '活跃',
+        summary: '跨平台 BLE 调试工具，包含多分支、多模式的实现。',
         repo: 'https://gitee.com/luoyaosheng/lys-smart-ble',
       },
       {
         name: 'Open IoT Platform',
         id: 'open-iot-platform',
-        status: 'Active',
-        summary: 'End-to-end IoT platform — server, mobile app, firmware, and release packaging.',
+        status: '活跃',
+        summary: '端到端 IoT 平台 — 服务端、移动端、固件和发布包装。',
         repo: 'https://gitee.com/luoyaosheng/lys-iot-platform',
       },
       {
         name: 'SerialTool',
         id: 'serial-tool',
-        status: 'Planned',
-        summary: 'Serial port debugging tool for IoT hardware development.',
+        status: '规划中',
+        summary: '串口调试工具，补齐 IoT 硬件开发链路。',
         repo: 'https://gitee.com/luoyaosheng/lys-serial-tool',
       },
     ],
   },
   {
-    title: 'Developer Tools',
-    intro: 'Desktop applications for database management, SSH operations, and development workflows.',
+    title: '开发者工具',
+    intro: '数据库管理、SSH 运维和开发流程的桌面应用。',
     items: [
       {
         name: 'RedisPilot',
         id: 'redispilot',
-        status: 'Active',
-        summary: 'Local-first Redis desktop management tool.',
+        status: '活跃',
+        summary: '本地优先的 Redis 桌面管理工具。',
         repo: 'https://gitee.com/luoyaosheng/lys-redis-pilot',
       },
       {
         name: 'QueryLab',
         id: 'querylab',
-        status: 'Active',
-        summary: 'Local-first database client, currently focused on MySQL / MariaDB.',
+        status: '活跃',
+        summary: '本地优先的数据库客户端，当前聚焦 MySQL / MariaDB。',
         repo: 'https://gitee.com/luoyaosheng/lys-query-lab',
       },
       {
         name: 'TermForge',
         id: 'termforge',
-        status: 'Active',
-        summary: 'Cross-platform SSH / SFTP / Runbook operations workbench.',
+        status: '活跃',
+        summary: '跨平台 SSH / SFTP / Runbook 运维工作台。',
         repo: 'https://gitee.com/luoyaosheng/lys-term-forge',
       },
       {
         name: 'MCP DB Gateway',
         id: 'db-gateway',
-        status: 'Active',
-        summary: 'Database gateway service for secure database access.',
+        status: '活跃',
+        summary: '数据库网关服务，提供更安全的数据库访问链路。',
         repo: 'https://gitee.com/luoyaosheng/lys-db-gateway',
       },
     ],
   },
   {
-    title: 'Content & Productivity',
-    intro: 'Tools for writing, publishing, and asset production.',
+    title: '创作与效率',
+    intro: '写作、发布和资产生产工具。',
     items: [
       {
         name: 'PaperMD',
         id: 'papermd',
-        status: 'Active',
-        summary: 'Native macOS Markdown editor with focus on input experience.',
+        status: '活跃',
+        summary: '原生 macOS Markdown 编辑器，强调输入体验。',
         repo: 'https://gitee.com/luoyaosheng/lys-paper-md',
       },
       {
         name: 'Batch Image Studio',
         id: 'image-studio',
-        status: 'Active',
-        summary: 'AI-powered batch image processing tool for project assets.',
+        status: '活跃',
+        summary: 'AI 驱动的图片批量处理工具，用于项目素材生产。',
         repo: 'https://gitee.com/luoyaosheng/lys-image-studio',
         github: 'https://github.com/LuoYaoSheng/batch-image-studio',
         docs: 'https://batch.open.i2kai.com',
@@ -233,42 +233,42 @@ export const projectGroups = [
       {
         name: 'Icon Gen',
         id: 'icon-gen',
-        status: 'Active',
-        summary: 'Icon generation tool for project asset pipelines.',
+        status: '活跃',
+        summary: '图标生成工具，服务项目资产生成。',
         repo: 'https://gitee.com/luoyaosheng/lys-icon-gen',
       },
       {
         name: 'Log Clean',
         id: 'log-clean',
-        status: 'Active',
-        summary: 'Log cleaning tool for development and AI collaboration workflows.',
+        status: '活跃',
+        summary: '日志清理工具，面向开发和 AI 协作场景。',
         repo: 'https://gitee.com/luoyaosheng/lys-log-clean',
       },
     ],
   },
   {
-    title: 'Archived',
-    intro: 'Historical repositories preserved for reference and migration context.',
+    title: '归档',
+    intro: '保留用于参考和迁移说明的历史仓库。',
     items: [
       {
         name: 'LightBLE',
         id: 'lightble',
-        status: 'Archived',
-        summary: 'Historical naming and legacy uni-app branch of Smart BLE.',
+        status: '已归档',
+        summary: 'Smart BLE 的历史命名与旧 uni-app 分支。',
         repo: 'https://gitee.com/luoyaosheng/lys-smart-ble',
       },
       {
         name: 'SmartBLE-iOS',
         id: 'smartble-ios',
-        status: 'Archived',
-        summary: 'Historical iOS repository of Smart BLE, kept as reference.',
+        status: '已归档',
+        summary: 'Smart BLE 的历史 iOS 仓库，保留作参考。',
         repo: 'https://gitee.com/luoyaosheng/smart-ble-i-os',
       },
       {
         name: 'IoT SmartLink Hub',
         id: 'iot-smartlink-hub',
-        status: 'Archived',
-        summary: 'Legacy SmartLink packaging repository, replaced by the main platform repo.',
+        status: '已归档',
+        summary: '旧 SmartLink 包装层仓库，已迁移到平台主仓库。',
         repo: 'https://gitee.com/luoyaosheng/iot-smartlink-hub',
       },
     ],
@@ -280,39 +280,39 @@ export const changelog = [
   {
     version: 'W14',
     date: '2026-04-01',
-    title: 'Site Restructure & Smart BLE Integration',
+    title: '站点重构 & Smart BLE 集成',
     changes: [
-      'Restructured the site from a learning platform to a standard open-source documentation site',
-      'Added Smart BLE naming guide and documentation skeleton',
-      'Prepared asset checklist and weekly update drafts',
+      '将站点从学习平台风格重构为标准开源文档站',
+      '补充 Smart BLE 命名指南和文档骨架',
+      '准备素材清单和周更草稿',
     ],
   },
   {
     version: 'W13',
     date: '2026-03-31',
-    title: 'Repository Entry Consolidation',
+    title: '仓库入口收口',
     changes: [
-      'Unified main repositories under the lys prefix',
-      'Clarified access paths and entry points',
-      'Documented relationships between historical and current repositories',
+      '主线仓库统一到 lys 前缀路径',
+      '明确访问入口和路径',
+      '补充历史仓库与主入口之间的关系说明',
     ],
   },
   {
     version: 'W13',
     date: '2026-03-31',
-    title: 'Documentation Alignment',
+    title: '文档对齐',
     changes: [
-      'Updated QueryLab, TermForge, Smart BLE, and Open IoT Platform entry docs',
-      'Aligned documentation with current engineering reality',
+      '更新 QueryLab、TermForge、Smart BLE、Open IoT Platform 的入口文档',
+      '使文档与当前工程现状保持一致',
     ],
   },
   {
     version: 'W13',
     date: '2026-03-31',
-    title: 'First Build Pass',
+    title: '第一轮构建整理',
     changes: [
-      'Passed frontend checks for QueryLab, RedisPilot, and TermForge',
-      'Restored open-iot-platform/server test suite',
+      '通过 QueryLab、RedisPilot、TermForge 前端检查',
+      '恢复 open-iot-platform/server 测试套件',
     ],
   },
 ];
@@ -320,43 +320,43 @@ export const changelog = [
 // ── Roadmap ──
 export const roadmap = {
   quarter: '2026 Q2',
-  theme: 'Ship usable tools, readable docs, and trackable updates in one place.',
+  theme: '把能用的工具、能读的文档、能跟进的更新都放到同一个入口。',
   inProgress: [
-    'Standalone documentation site',
-    'Smart BLE entry point enhancement',
-    'Historical repository migration notes',
+    '独立文档站上线',
+    'Smart BLE 主入口强化',
+    '历史仓库迁移说明',
   ],
   planned: [
-    'Project detail pages',
-    'Changelog archive',
-    'Additional historical repository cleanup',
+    '项目详情页',
+    '更新日志归档',
+    '更多历史仓库整理',
   ],
   done: [
-    'lys prefix naming convention',
-    'Gitee main repository path consolidation',
-    'First documentation and build pass',
+    'lys 前缀命名规范',
+    'Gitee 主线仓库路径收口',
+    '第一轮文档与构建整理',
   ],
 };
 
 // ── About ──
 export const aboutContent = {
-  mission: 'This site exists to make open-source projects discoverable, understandable, and usable — not to showcase roadmaps or pitch visions.',
+  mission: '这个站点存在的目的是让开源项目可发现、可理解、可用 — 而不是展示路线图或兜售愿景。',
   principles: [
     {
-      title: 'Real projects, not demos',
-      description: 'Every project listed here was built to solve a specific problem — BLE debugging, device provisioning, database management, SSH operations, or content creation.',
+      title: '真实项目，不是演示',
+      description: '这里列出的每个项目都是为了解决具体问题 — BLE 调试、设备配网、数据库管理、SSH 运维或内容创作。',
     },
     {
-      title: 'Docs as first-class citizens',
-      description: 'Documentation is not an afterthought. Guides, comparisons, and architecture articles are part of the project, not supplementary material.',
+      title: '文档是一等公民',
+      description: '文档不是附属物。技术指南、对比分析和架构文章是项目的一部分，不是补充材料。',
     },
     {
-      title: 'Preserve history',
-      description: 'Historical repositories and migration paths are retained. Understanding how a project evolved is as valuable as understanding its current state.',
+      title: '保留历史',
+      description: '历史仓库和迁移路径都会保留。理解项目如何演进和理解项目当前状态同样重要。',
     },
     {
-      title: 'User-first open source',
-      description: 'The site should tell you what works, where to download, and where to go next — before talking about plans and roadmaps.',
+      title: '用户优先的开源',
+      description: '站点应该先告诉你什么能用、去哪里下载、下一步去哪 — 而不是先谈规划和路线图。',
     },
   ],
 };

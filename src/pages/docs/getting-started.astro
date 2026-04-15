@@ -4,28 +4,27 @@ import '../../styles/doc.css';
 import { quickStart } from '../../data/site';
 ---
 
-<DocLayout title="Getting Started | lys Open Source System">
-  <h1>Getting Started</h1>
+<DocLayout title="快速开始 | lys 开源项目集合">
+  <h1>快速开始</h1>
   <p>
-    This guide walks you through the quickest path to exploring the lys open-source ecosystem.
-    Whether you are interested in BLE debugging, IoT platforms, or developer tools, start here.
+    本指南带你快速了解 lys 开源项目生态。无论你关注 BLE 调试、IoT 平台还是开发者工具，从这里开始。
   </p>
 
-  <h2>Quick Start Steps</h2>
+  <h2>快速上手步骤</h2>
   {quickStart.steps.map((step, index) => (
     <div class="doc-section">
-      <h3>Step {index + 1}: {step.title}</h3>
+      <h3>步骤 {index + 1}：{step.title}</h3>
       <p>{step.description}</p>
       <p><a href={step.href} target={step.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer">
-        {step.href.startsWith('http') ? 'Open Repository' : 'View Page'} →
+        {step.href.startsWith('http') ? '打开仓库' : '查看页面'} →
       </a></p>
     </div>
   ))}
 
-  <h2>What's Next?</h2>
+  <h2>接下来</h2>
   <ul>
-    <li><a href="/docs/guides">Read technical guides</a> — architecture deep dives, platform comparisons, and hardware tutorials.</li>
-    <li><a href="/projects">Browse all projects</a> — explore the full list of open-source tools and platforms.</li>
-    <li><a href="/changelog">Check the changelog</a> — see what was recently shipped and what is coming next.</li>
+    <li><a href="/docs/guides">阅读技术指南</a> — 架构深度解析、平台对比和硬件教程。</li>
+    <li><a href="/projects">浏览全部项目</a> — 探索所有开源工具和平台。</li>
+    <li><a href="/changelog">查看更新日志</a> — 了解最近发布了什么以及下一步计划。</li>
   </ul>
 </DocLayout>

@@ -4,11 +4,10 @@ import '../styles/doc.css';
 import { roadmap } from '../data/site';
 ---
 
-<DocLayout title="Roadmap | lys Open Source System">
-  <h1>Roadmap</h1>
+<DocLayout title="路线图 | lys 开源项目集合">
+  <h1>路线图</h1>
   <p>
-    What is being worked on, what is planned, and what has been shipped.
-    This reflects the current development priorities, not an internal schedule.
+    正在进行的工作、计划中的事项和已完成的内容。这反映当前的开发优先级，不是内部排期表。
   </p>
 
   <div class="roadmap-section">
@@ -17,7 +16,7 @@ import { roadmap } from '../data/site';
   </div>
 
   <div class="roadmap-section">
-    <h3>In Progress</h3>
+    <h3>进行中</h3>
     <ul class="roadmap-list">
       {roadmap.inProgress.map((item) => (
         <li>{item}</li>
@@ -26,7 +25,7 @@ import { roadmap } from '../data/site';
   </div>
 
   <div class="roadmap-section">
-    <h3>Planned</h3>
+    <h3>计划中</h3>
     <ul class="roadmap-list planned">
       {roadmap.planned.map((item) => (
         <li>{item}</li>
@@ -35,7 +34,7 @@ import { roadmap } from '../data/site';
   </div>
 
   <div class="roadmap-section">
-    <h3>Done</h3>
+    <h3>已完成</h3>
     <ul class="roadmap-list done">
       {roadmap.done.map((item) => (
         <li>{item}</li>

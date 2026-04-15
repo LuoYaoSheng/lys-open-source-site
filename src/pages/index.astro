@@ -4,21 +4,21 @@ import '../styles/landing.css';
 import { features, quickStart, siteMeta } from '../data/site';
 ---
 
-<LandingLayout title="lys Open Source System">
+<LandingLayout title="lys 开源项目集合">
   <section class="hero">
-    <span class="eyebrow">Open Source</span>
-    <h1>BLE, IoT & Developer Tools</h1>
+    <span class="eyebrow">开源项目</span>
+    <h1>BLE、IoT 与开发者工具</h1>
     <p class="hero-copy">{siteMeta.description}</p>
     <div class="cta-row" style="justify-content: center;">
-      <a class="button-primary" href="/docs/getting-started">Get Started</a>
-      <a class="button-secondary" href="/projects">View Projects</a>
+      <a class="button-primary" href="/docs/getting-started">快速开始</a>
+      <a class="button-secondary" href="/projects">浏览项目</a>
     </div>
   </section>
 
   <section class="section">
     <div class="section-head" style="text-align: center;">
       <span class="eyebrow">Featured</span>
-      <h2>Core Projects</h2>
+      <h2>核心项目</h2>
     </div>
     <div class="section-grid">
       {features.map((feature) => (
@@ -27,7 +27,7 @@ import { features, quickStart, siteMeta } from '../data/site';
           <h3>{feature.title}</h3>
           <p>{feature.description}</p>
           <a href={feature.href} target={feature.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer">
-            {feature.href.startsWith('http') ? 'View Repo' : 'Browse'}
+            {feature.href.startsWith('http') ? '查看仓库' : '浏览'}
           </a>
         </article>
       ))}
@@ -37,15 +37,15 @@ import { features, quickStart, siteMeta } from '../data/site';
   <section class="section">
     <div class="section-head" style="text-align: center;">
       <span class="eyebrow">Quick Start</span>
-      <h2>Get Going in 3 Steps</h2>
+      <h2>三步上手</h2>
     </div>
     <div class="section-grid">
       {quickStart.steps.map((step, index) => (
         <article class="feature-card">
-          <span class="tag">Step {index + 1}</span>
+          <span class="tag">步骤 {index + 1}</span>
           <h3>{step.title}</h3>
           <p>{step.description}</p>
-          <a href={step.href}>Open</a>
+          <a href={step.href}>进入</a>
         </article>
       ))}
     </div>
@@ -53,20 +53,20 @@ import { features, quickStart, siteMeta } from '../data/site';
 
   <div class="quick-links">
     <a class="quick-link" href="/docs/getting-started">
-      <strong>Getting Started</strong>
-      <span>Setup & first run</span>
+      <strong>快速开始</strong>
+      <span>安装与首次运行</span>
     </a>
     <a class="quick-link" href="/docs/guides">
-      <strong>Guides</strong>
-      <span>Technical articles</span>
+      <strong>技术指南</strong>
+      <span>技术文章与深度解析</span>
     </a>
     <a class="quick-link" href="/changelog">
-      <strong>Changelog</strong>
-      <span>Latest updates</span>
+      <strong>更新日志</strong>
+      <span>最新变更</span>
     </a>
     <a class="quick-link" href="/roadmap">
-      <strong>Roadmap</strong>
-      <span>What's coming next</span>
+      <strong>路线图</strong>
+      <span>后续计划</span>
     </a>
   </div>
 </LandingLayout>
