@@ -1,16 +1,35 @@
 ---
 import DocLayout from '../../layouts/DocLayout.astro';
 import '../../styles/doc.css';
-import { quickStart } from '../../data/site';
+import { quickStart, projectGroups } from '../../data/site';
 ---
 
 <DocLayout title="快速开始 | lys 开源项目集合">
   <h1>快速开始</h1>
   <p>
-    本指南带你快速了解 lys 开源项目生态。无论你关注 BLE 调试、IoT 平台还是开发者工具，从这里开始。
+    lys 是一组围绕 BLE、IoT 和开发者工具构建的开源项目。本页帮你快速了解项目生态，找到适合你的入口。
   </p>
 
-  <h2>快速上手步骤</h2>
+  <h2>项目生态概览</h2>
+  <p>项目按用途分为四类：</p>
+  <ul>
+    <li><strong>核心项目</strong>（Smart BLE、Open IoT Platform）— BLE 调试和 IoT 开发的主线入口</li>
+    <li><strong>开发者工具</strong>（RedisPilot、QueryLab、TermForge）— 基于 Tauri 的本地优先桌面应用</li>
+    <li><strong>创作与效率</strong>（PaperMD、Batch Image Studio）— 写作、图片处理和资产生成</li>
+    <li><strong>归档</strong>（LightBLE、SmartBLE-iOS）— 保留用于参考的历史仓库</li>
+  </ul>
+
+  <h2>技术栈</h2>
+  <ul>
+    <li><strong>移动端</strong>：Flutter（Smart BLE、Open IoT Platform 移动端）</li>
+    <li><strong>桌面端</strong>：Tauri + SvelteKit / Vue（RedisPilot、QueryLab、TermForge、Batch Image Studio）</li>
+    <li><strong>服务端</strong>：Go（Open IoT Platform server）</li>
+    <li><strong>固件</strong>：ESP32 + C（Open IoT Platform firmware）</li>
+    <li><strong>小程序</strong>：微信小程序（Smart BLE 的 BLE Toolkit+）</li>
+    <li><strong>macOS 原生</strong>：Swift（PaperMD）</li>
+  </ul>
+
+  <h2>推荐路径</h2>
   {quickStart.steps.map((step, index) => (
     <div class="doc-section">
       <h3>步骤 {index + 1}：{step.title}</h3>
@@ -23,8 +42,9 @@ import { quickStart } from '../../data/site';
 
   <h2>接下来</h2>
   <ul>
-    <li><a href="/docs/guides">阅读技术指南</a> — 架构深度解析、平台对比和硬件教程。</li>
-    <li><a href="/projects">浏览全部项目</a> — 探索所有开源工具和平台。</li>
-    <li><a href="/changelog">查看更新日志</a> — 了解最近发布了什么以及下一步计划。</li>
+    <li><a href="/docs/guides">阅读技术指南</a> — BLE 抽象层设计、8 种跨平台方案对比、ESP32 硬件实战。</li>
+    <li><a href="/projects">浏览全部项目</a> — 按分类查看所有开源仓库和当前状态。</li>
+    <li><a href="/changelog">查看更新日志</a> — 了解最近做了哪些变更。</li>
+    <li><a href="/roadmap">查看路线图</a> — 了解后续计划。</li>
   </ul>
 </DocLayout>

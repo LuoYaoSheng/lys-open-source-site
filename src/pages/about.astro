@@ -8,6 +8,14 @@ import { aboutContent } from '../data/site';
   <h1>关于</h1>
   <p>{aboutContent.mission}</p>
 
+  <h2>作者</h2>
+  <p>{aboutContent.author.bio}</p>
+  <ul>
+    {aboutContent.author.links.map((link) => (
+      <li><a href={link.href} target="_blank" rel="noreferrer">{link.label}</a></li>
+    ))}
+  </ul>
+
   <h2>原则</h2>
   {aboutContent.principles.map((principle) => (
     <div class="doc-section">

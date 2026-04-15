@@ -7,7 +7,7 @@ import { features, quickStart, siteMeta } from '../data/site';
 <LandingLayout title="lys 开源项目集合">
   <section class="hero">
     <span class="eyebrow">开源项目</span>
-    <h1>BLE、IoT 与开发者工具</h1>
+    <h1>从 BLE 调试到 IoT 平台，<br/>从想法到可用的工具</h1>
     <p class="hero-copy">{siteMeta.description}</p>
     <div class="cta-row" style="justify-content: center;">
       <a class="button-primary" href="/docs/getting-started">快速开始</a>
@@ -17,8 +17,8 @@ import { features, quickStart, siteMeta } from '../data/site';
 
   <section class="section">
     <div class="section-head" style="text-align: center;">
-      <span class="eyebrow">Featured</span>
-      <h2>核心项目</h2>
+      <span class="eyebrow">核心项目</span>
+      <h2>三条主线</h2>
     </div>
     <div class="section-grid">
       {features.map((feature) => (
@@ -27,7 +27,7 @@ import { features, quickStart, siteMeta } from '../data/site';
           <h3>{feature.title}</h3>
           <p>{feature.description}</p>
           <a href={feature.href} target={feature.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer">
-            {feature.href.startsWith('http') ? '查看仓库' : '浏览'}
+            {feature.href.startsWith('http') ? '查看仓库' : '浏览全部'}
           </a>
         </article>
       ))}
@@ -36,8 +36,8 @@ import { features, quickStart, siteMeta } from '../data/site';
 
   <section class="section">
     <div class="section-head" style="text-align: center;">
-      <span class="eyebrow">Quick Start</span>
-      <h2>三步上手</h2>
+      <span class="eyebrow">快速上手</span>
+      <h2>三步了解这套开源体系</h2>
     </div>
     <div class="section-grid">
       {quickStart.steps.map((step, index) => (
@@ -45,7 +45,7 @@ import { features, quickStart, siteMeta } from '../data/site';
           <span class="tag">步骤 {index + 1}</span>
           <h3>{step.title}</h3>
           <p>{step.description}</p>
-          <a href={step.href}>进入</a>
+          <a href={step.href}>{step.href.startsWith('http') ? '打开仓库' : '查看'}</a>
         </article>
       ))}
     </div>
@@ -54,19 +54,19 @@ import { features, quickStart, siteMeta } from '../data/site';
   <div class="quick-links">
     <a class="quick-link" href="/docs/getting-started">
       <strong>快速开始</strong>
-      <span>安装与首次运行</span>
+      <span>了解项目生态与上手路径</span>
     </a>
     <a class="quick-link" href="/docs/guides">
       <strong>技术指南</strong>
-      <span>技术文章与深度解析</span>
+      <span>架构解析与实战教程</span>
     </a>
     <a class="quick-link" href="/changelog">
       <strong>更新日志</strong>
-      <span>最新变更</span>
+      <span>最近做了什么变更</span>
     </a>
     <a class="quick-link" href="/roadmap">
       <strong>路线图</strong>
-      <span>后续计划</span>
+      <span>接下来计划做什么</span>
     </a>
   </div>
 </LandingLayout>
