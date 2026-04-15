@@ -1,0 +1,31 @@
+---
+import DocLayout from '../../layouts/DocLayout.astro';
+import '../../styles/doc.css';
+import { quickStart } from '../../data/site';
+---
+
+<DocLayout title="Getting Started | lys Open Source System">
+  <h1>Getting Started</h1>
+  <p>
+    This guide walks you through the quickest path to exploring the lys open-source ecosystem.
+    Whether you are interested in BLE debugging, IoT platforms, or developer tools, start here.
+  </p>
+
+  <h2>Quick Start Steps</h2>
+  {quickStart.steps.map((step, index) => (
+    <div class="doc-section">
+      <h3>Step {index + 1}: {step.title}</h3>
+      <p>{step.description}</p>
+      <p><a href={step.href} target={step.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer">
+        {step.href.startsWith('http') ? 'Open Repository' : 'View Page'} →
+      </a></p>
+    </div>
+  ))}
+
+  <h2>What's Next?</h2>
+  <ul>
+    <li><a href="/docs/guides">Read technical guides</a> — architecture deep dives, platform comparisons, and hardware tutorials.</li>
+    <li><a href="/projects">Browse all projects</a> — explore the full list of open-source tools and platforms.</li>
+    <li><a href="/changelog">Check the changelog</a> — see what was recently shipped and what is coming next.</li>
+  </ul>
+</DocLayout>

@@ -1,0 +1,369 @@
+/* ── DocLayout: Document Page Styles ── */
+
+/* ── Topbar for doc pages ── */
+.doc-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  padding: 0.9rem 1.5rem;
+}
+
+.topbar-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ── Doc Layout Grid ── */
+.doc-layout {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: calc(100vh - 60px);
+}
+
+/* ── Sidebar ── */
+.sidebar {
+  position: sticky;
+  top: 60px;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  border-right: 1px solid var(--line);
+  background: var(--bg-alt);
+  padding: 1.5rem 0;
+}
+
+.sidebar-nav {
+  padding: 0;
+}
+
+.sidebar-group {
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-group-title {
+  padding: 0 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-link {
+  display: block;
+  padding: 0.45rem 1.25rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  border-left: 3px solid transparent;
+  transition: all var(--transition);
+}
+
+.sidebar-link:hover {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.sidebar-link.active {
+  color: var(--accent);
+  border-left-color: var(--accent);
+  background: var(--accent-soft);
+  font-weight: 600;
+}
+
+/* ── Doc Main Area ── */
+.doc-main {
+  padding: 2rem 3rem;
+  min-width: 0;
+}
+
+/* ── Breadcrumb ── */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumb a {
+  color: var(--muted);
+  transition: color var(--transition);
+}
+
+.breadcrumb a:hover {
+  color: var(--accent);
+}
+
+.breadcrumb-sep {
+  color: var(--line);
+}
+
+/* ── Doc Content Typography ── */
+.doc-content {
+  max-width: var(--doc-max-width);
+  line-height: var(--doc-line-height);
+}
+
+.doc-content h1 {
+  font-family: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: var(--doc-h1-size);
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+.doc-content h2 {
+  font-family: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: var(--doc-h2-size);
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 2rem 0 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.doc-content h3 {
+  font-family: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: var(--doc-h3-size);
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.doc-content p {
+  color: var(--muted);
+  line-height: var(--doc-line-height);
+  margin: 0.75rem 0;
+}
+
+.doc-content ul,
+.doc-content ol {
+  padding-left: 1.5rem;
+  color: var(--muted);
+  line-height: var(--doc-line-height);
+}
+
+.doc-content li {
+  margin: 0.35rem 0;
+}
+
+.doc-content a {
+  color: var(--accent);
+  transition: color var(--transition);
+}
+
+.doc-content a:hover {
+  color: var(--accent-dark);
+}
+
+.doc-content code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9em;
+  padding: 0.15em 0.4em;
+  background: var(--bg-alt);
+  border-radius: 4px;
+  border: 1px solid var(--line);
+}
+
+.doc-content pre {
+  background: var(--code-bg);
+  color: var(--code-fg);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius);
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.doc-content pre code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* ── Doc Content: Project Group ── */
+.doc-content .project-group {
+  margin: 2rem 0;
+}
+
+.doc-content .project-group h2 {
+  margin-bottom: 0.5rem;
+}
+
+.doc-content .project-group p {
+  margin-top: 0;
+}
+
+/* ── Doc Content: Section ── */
+.doc-section {
+  margin: 2rem 0 0;
+}
+
+.doc-section-head {
+  margin-bottom: 1rem;
+}
+
+.doc-section-head h2 {
+  margin: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.doc-section-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* ── Doc Content: Project Card (simplified) ── */
+.doc-project-card {
+  padding: 1.2rem;
+  border-radius: var(--radius);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  transition: border-color var(--transition);
+}
+
+.doc-project-card:hover {
+  border-color: var(--accent);
+}
+
+.doc-project-card h3 {
+  margin: 0.5rem 0 0;
+  font-size: 1.1rem;
+}
+
+.doc-project-card p {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.doc-project-card a {
+  display: inline-flex;
+  margin-top: 0.5rem;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* ── Doc Content: Changelog ── */
+.changelog-entry {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.changelog-entry:last-child {
+  border-bottom: none;
+}
+
+.changelog-entry h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.changelog-meta {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.changelog-changes {
+  list-style: disc;
+  padding-left: 1.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.changelog-changes li {
+  margin: 0.25rem 0;
+}
+
+/* ── Doc Content: Roadmap ── */
+.roadmap-section {
+  margin: 1.5rem 0;
+}
+
+.roadmap-section h3 {
+  margin-bottom: 0.5rem;
+}
+
+.roadmap-list {
+  list-style: none;
+  padding: 0;
+}
+
+.roadmap-list li {
+  padding: 0.5rem 0;
+  padding-left: 1.25rem;
+  position: relative;
+  color: var(--muted);
+}
+
+.roadmap-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.85rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.roadmap-list.planned li::before {
+  background: var(--tag-amber-fg);
+}
+
+.roadmap-list.done li::before {
+  background: var(--tag-green-fg);
+}
+
+/* ── Doc Footer ── */
+.doc-main .site-footer {
+  margin-top: 3rem;
+}
+
+/* ── Responsive: Doc Layout ── */
+@media (max-width: 1024px) {
+  .doc-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    z-index: 200;
+    transform: translateX(-100%);
+    transition: transform var(--transition);
+    padding-top: 2rem;
+  }
+
+  .sidebar.sidebar-open {
+    transform: translateX(0);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .doc-main {
+    padding: 1.5rem 1.25rem;
+  }
+}

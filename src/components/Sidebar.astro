@@ -1,0 +1,29 @@
+---
+import { sidebarConfig } from '../data/site';
+
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+---
+
+<nav class="sidebar-nav" aria-label="Sidebar navigation">
+  {sidebarConfig.map((group) => (
+    <div class="sidebar-group">
+      <div class="sidebar-group-title">{group.group}</div>
+      <ul class="sidebar-list">
+        {group.items.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class:list={['sidebar-link', { active: currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href)) }]}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))}
+</nav>

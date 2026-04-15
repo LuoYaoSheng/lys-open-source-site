@@ -1,45 +1,45 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import DocLayout from '../layouts/DocLayout.astro';
+import '../styles/doc.css';
 import { roadmap } from '../data/site';
 ---
 
-<BaseLayout title="Roadmap | lys Open Source System">
-  <section class="section">
-    <div class="section-head page-intro">
-      <div>
-        <span class="eyebrow">Roadmap</span>
-        <h1>接下来会补什么，和你有什么关系。</h1>
-        <p>这一页不是内部排期表，而是告诉学习者：后续哪些能力、文章、入口和项目体验会继续变得更完整。</p>
-      </div>
-    </div>
+<DocLayout title="Roadmap | lys Open Source System">
+  <h1>Roadmap</h1>
+  <p>
+    What is being worked on, what is planned, and what has been shipped.
+    This reflects the current development priorities, not an internal schedule.
+  </p>
 
-    <div class="section-grid">
-      <article class="section-card">
-        <span class="eyebrow">Theme</span>
-        <h2>{roadmap.theme}</h2>
-      </article>
-      <article class="section-card">
-        <span class="eyebrow">Why it matters</span>
-        <p>如果你把这个站当成学习入口，那么这里列出的事情，会直接影响你下一次能体验到什么、能读到什么、能继续学到哪里。</p>
-      </article>
-      <article class="section-card">
-        <span class="eyebrow">In Progress</span>
-        <ul class="list">
-          {roadmap.inProgress.map((item) => <li>{item}</li>)}
-        </ul>
-      </article>
-      <article class="section-card">
-        <span class="eyebrow">Planned</span>
-        <ul class="list">
-          {roadmap.planned.map((item) => <li>{item}</li>)}
-        </ul>
-      </article>
-      <article class="section-card">
-        <span class="eyebrow">Done</span>
-        <ul class="list">
-          {roadmap.done.map((item) => <li>{item}</li>)}
-        </ul>
-      </article>
-    </div>
-  </section>
-</BaseLayout>
+  <div class="roadmap-section">
+    <h2>{roadmap.quarter}</h2>
+    <p>{roadmap.theme}</p>
+  </div>
+
+  <div class="roadmap-section">
+    <h3>In Progress</h3>
+    <ul class="roadmap-list">
+      {roadmap.inProgress.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="roadmap-section">
+    <h3>Planned</h3>
+    <ul class="roadmap-list planned">
+      {roadmap.planned.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="roadmap-section">
+    <h3>Done</h3>
+    <ul class="roadmap-list done">
+      {roadmap.done.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  </div>
+</DocLayout>

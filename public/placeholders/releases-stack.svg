@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="960" viewBox="0 0 960 960" fill="none">
-  <rect width="960" height="960" rx="48" fill="#F6EFE2"/>
-  <rect x="118" y="154" width="724" height="156" rx="28" fill="#FFF9F1" stroke="#D3C5B4" stroke-width="8"/>
-  <rect x="118" y="402" width="724" height="156" rx="28" fill="#FFF9F1" stroke="#D3C5B4" stroke-width="8"/>
-  <rect x="118" y="650" width="724" height="156" rx="28" fill="#FFF9F1" stroke="#D3C5B4" stroke-width="8"/>
-  <circle cx="204" cy="232" r="42" fill="#17120F"/>
-  <circle cx="204" cy="480" r="42" fill="#9F2F16"/>
-  <circle cx="204" cy="728" r="42" fill="#245E4F"/>
-  <text x="286" y="246" fill="#17120F" font-family="IBM Plex Sans, sans-serif" font-size="42" font-weight="700">PaperMD / RedisPilot</text>
-  <text x="286" y="494" fill="#17120F" font-family="IBM Plex Sans, sans-serif" font-size="42" font-weight="700">Desktop Releases</text>
-  <text x="286" y="742" fill="#17120F" font-family="IBM Plex Sans, sans-serif" font-size="42" font-weight="700">Placeholder Stack</text>
-  <text x="480" y="890" text-anchor="middle" fill="#9F2F16" font-family="IBM Plex Sans, sans-serif" font-size="40" font-weight="700">Release Placeholder</text>
+  <rect width="960" height="960" rx="48" fill="#f0f7ff"/>
+  <rect x="118" y="154" width="724" height="156" rx="28" fill="#ffffff" stroke="#cbd5e1" stroke-width="8"/>
+  <rect x="118" y="402" width="724" height="156" rx="28" fill="#ffffff" stroke="#cbd5e1" stroke-width="8"/>
+  <rect x="118" y="650" width="724" height="156" rx="28" fill="#ffffff" stroke="#cbd5e1" stroke-width="8"/>
+  <circle cx="204" cy="232" r="42" fill="#1e293b"/>
+  <circle cx="204" cy="480" r="42" fill="#016FFF"/>
+  <circle cx="204" cy="728" r="42" fill="#0056cc"/>
+  <text x="286" y="246" fill="#1e293b" font-family="Inter, sans-serif" font-size="42" font-weight="700">PaperMD / RedisPilot</text>
+  <text x="286" y="494" fill="#1e293b" font-family="Inter, sans-serif" font-size="42" font-weight="700">Desktop Releases</text>
+  <text x="286" y="742" fill="#1e293b" font-family="Inter, sans-serif" font-size="42" font-weight="700">Placeholder Stack</text>
+  <text x="480" y="890" text-anchor="middle" fill="#016FFF" font-family="Inter, sans-serif" font-size="40" font-weight="700">Release Placeholder</text>
 </svg>

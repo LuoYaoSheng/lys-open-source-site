@@ -10,7 +10,7 @@ interface Props {
 
 const {
   title,
-  description = 'lys open source system — 从真实开源项目学习 BLE 与 IoT',
+  description = siteMeta.description,
   image,
 } = Astro.props;
 
@@ -19,7 +19,7 @@ const ogImage = image || '/favicon.svg';
 ---
 
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,6 +29,9 @@ const ogImage = image || '/favicon.svg';
     <!-- Canonical -->
     <link rel="canonical" href={canonicalURL} />
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={siteMeta.siteName} />
@@ -36,7 +39,7 @@ const ogImage = image || '/favicon.svg';
     <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL(ogImage, siteMeta.siteUrl)} />
     <meta property="og:url" content={canonicalURL} />
-    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:locale" content="en_US" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -47,23 +50,43 @@ const ogImage = image || '/favicon.svg';
     <meta name="keywords" content={siteMeta.keywords} />
     <meta name="author" content={siteMeta.author} />
     <meta name="theme-color" content={siteMeta.themeColor} />
+
+    <!-- Anti-flicker: dark mode -->
+    <script is:inline>
+      (function () {
+        const stored = localStorage.getItem('theme');
+        if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
   </head>
   <body>
-    <div class="site-shell">
-      <header class="topbar">
-        <a class="brand" href="/">lys</a>
-        <nav class="nav">
-          <a href="/learn">学习路径</a>
-          <a href="/articles">文章</a>
-          <a href="/projects">项目</a>
-          <a href="/weekly">周更</a>
-          <a href="/roadmap">路线图</a>
-          <a href="/about">关于</a>
-        </nav>
-      </header>
-      <main>
-        <slot />
-      </main>
-    </div>
+    <slot />
   </body>
 </html>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    var toggle = document.getElementById('theme-toggle');
+    if (!toggle) return;
+    var html = document.documentElement;
+    var iconLight = document.querySelector('.theme-icon-light');
+    var iconDark = document.querySelector('.theme-icon-dark');
+
+    function updateIcons() {
+      var isDark = html.classList.contains('dark');
+      if (iconLight) iconLight.style.display = isDark ? 'none' : 'inline';
+      if (iconDark) iconDark.style.display = isDark ? 'inline' : 'none';
+    }
+
+    updateIcons();
+
+    toggle.addEventListener('click', function () {
+      html.classList.toggle('dark');
+      var isDark = html.classList.contains('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateIcons();
+    });
+  });
+</script>

@@ -1,0 +1,34 @@
+---
+import DocLayout from '../../layouts/DocLayout.astro';
+import '../../styles/doc.css';
+import { guideCollections } from '../../data/site';
+---
+
+<DocLayout title="Guides | lys Open Source System">
+  <h1>Guides</h1>
+  <p>
+    Technical articles covering BLE architecture, IoT platform design, hardware integration,
+    and cross-platform development patterns.
+  </p>
+
+  {guideCollections.map((collection) => (
+    <div class="doc-section">
+      <h2>{collection.title}</h2>
+      <p>{collection.intro}</p>
+      <div class="doc-section-grid">
+        {collection.items.map((item) => (
+          <article class="doc-project-card">
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
+              <span class="status-chip">{item.level}</span>
+              <span style="font-size: 0.78rem; color: var(--muted);">{item.readTime}</span>
+              <span style="font-size: 0.78rem; color: var(--muted);">{item.tag}</span>
+            </div>
+            <h3>{item.title}</h3>
+            <p>{item.summary}</p>
+            <a href={item.href} target="_blank" rel="noreferrer">Read →</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  ))}
+</DocLayout>

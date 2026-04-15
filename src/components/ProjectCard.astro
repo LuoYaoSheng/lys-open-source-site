@@ -4,19 +4,15 @@ interface Props {
   summary: string;
   status: string;
   repo: string;
-  bestFor?: string;
   ctaLabel?: string;
 }
 
-const { name, summary, status, repo, bestFor, ctaLabel = '查看仓库' } = Astro.props;
+const { name, summary, status, repo, ctaLabel = 'View Repository' } = Astro.props;
 ---
 
-<article class="project-card">
-  <div class="project-meta">
-    <span class="status-chip">{status}</span>
-  </div>
+<article class="doc-project-card">
+  <span class="status-chip">{status}</span>
   <h3>{name}</h3>
   <p>{summary}</p>
-  {bestFor && <p class="best-for"><strong>Best for</strong> {bestFor}</p>}
-  <a href={repo} target="_blank" rel="noreferrer">{ctaLabel}</a>
+  <a href={repo} target="_blank" rel="noreferrer">{ctaLabel} →</a>
 </article>

@@ -1,50 +1,30 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import ProjectCard from '../components/ProjectCard.astro';
+import DocLayout from '../layouts/DocLayout.astro';
+import '../styles/doc.css';
 import { projectGroups } from '../data/site';
 ---
 
-<BaseLayout title="Projects | lys Open Source System">
-  <section class="section">
-    <div class="section-head page-intro">
-      <div>
-        <span class="eyebrow">Projects</span>
-        <h1>按你想学什么来找项目，不按仓库名猜主线。</h1>
-        <p>如果你只是想先学一个项目，请先从 Smart BLE 开始；如果你要完整链路，再看 Open IoT Platform。其他工具更适合作为扩展阅读和工具箱。</p>
+<DocLayout title="Projects | lys Open Source System">
+  <h1>Projects</h1>
+  <p>
+    All open-source projects organized by category. Each project links to its repository
+    and provides a brief description of its purpose and current status.
+  </p>
+
+  {projectGroups.map((group) => (
+    <div class="project-group" id={group.items[0]?.id}>
+      <h2>{group.title}</h2>
+      <p>{group.intro}</p>
+      <div class="doc-section-grid">
+        {group.items.map((item) => (
+          <article class="doc-project-card">
+            <span class="status-chip">{item.status}</span>
+            <h3>{item.name}</h3>
+            <p>{item.summary}</p>
+            <a href={item.repo} target="_blank" rel="noreferrer">View Repository →</a>
+          </article>
+        ))}
       </div>
     </div>
-
-    <div class="section-grid">
-      <article class="section-card focus-card">
-        <h3>先上手</h3>
-        <p>先从 Smart BLE 开始。它最容易体验，也最适合建立“BLE 到底怎么调”的第一感知。</p>
-        <p class="focus-emphasis">先试项目，再回来看实现。</p>
-      </article>
-      <article class="section-card focus-card">
-        <h3>再深入</h3>
-        <p>当你开始关心完整链路时，再走 Open IoT Platform，把设备、配网、MQTT、服务端和 App 串起来看。</p>
-        <p class="focus-emphasis">先看链路，再理解系统。</p>
-      </article>
-      <article class="section-card focus-card">
-        <h3>最后补工具箱</h3>
-        <p>RedisPilot、QueryLab、TermForge、PaperMD 这些项目更适合在你已经有主线感知后，再按需求继续补。</p>
-        <p class="focus-emphasis">把工具当成延伸阅读，不要反过来淹没主线。</p>
-      </article>
-    </div>
-
-    {projectGroups.map((group) => (
-      <section class="section" id={group.items[0]?.id}>
-        <div class="section-head">
-          <div>
-            <span class="eyebrow">{group.title}</span>
-            <h2>{group.title}</h2>
-            {'intro' in group && <p>{group.intro}</p>}
-          </div>
-        </div>
-        <div class="section-grid">
-          {group.items.map((item) => <ProjectCard {...item} ctaLabel="查看项目" />)}
-        </div>
-      </section>
-    ))}
-  </section>
-</BaseLayout>
+  ))}
+</DocLayout>

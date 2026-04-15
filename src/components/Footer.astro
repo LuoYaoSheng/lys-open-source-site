@@ -1,0 +1,11 @@
+---
+import { siteMeta } from '../data/site';
+---
+
+<footer class="site-footer">
+  <p>&copy; {new Date().getFullYear()} {siteMeta.author}. Open source under respective licenses.</p>
+  <div class="footer-links">
+    <a href={siteMeta.github} target="_blank" rel="noreferrer">GitHub</a>
+    <a href={siteMeta.repo} target="_blank" rel="noreferrer">Gitee</a>
+  </div>
+</footer>
