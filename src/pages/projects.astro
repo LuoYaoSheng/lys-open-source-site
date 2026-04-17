@@ -7,7 +7,7 @@ import { projectGroups } from '../data/site';
 <DocLayout title="项目 | lys 开源项目集合">
   <h1>项目</h1>
   <p>
-    所有开源项目按类别组织。每个项目链接到其仓库，并提供简要描述和当前状态。
+    所有开源项目按类别组织。优先提供体验 / 文档入口，再补 Gitee 和 GitHub 源码链接。
   </p>
 
   {projectGroups.map((group) => (
@@ -17,6 +17,9 @@ import { projectGroups } from '../data/site';
       <div class="doc-section-grid">
         {group.items.map((item) => (
           <article class="doc-project-card" id={item.id}>
+            {item.image && (
+              <img class="doc-project-thumb" src={item.image} alt={item.name} loading="lazy" />
+            )}
             <span class="status-chip">{item.status}</span>
             <h3>{item.name}</h3>
             <p>{item.summary}</p>

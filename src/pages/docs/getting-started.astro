@@ -1,7 +1,7 @@
 ---
 import DocLayout from '../../layouts/DocLayout.astro';
 import '../../styles/doc.css';
-import { quickStart, projectGroups } from '../../data/site';
+import { quickStart, projectGroups, toolVisuals, visualEntries } from '../../data/site';
 ---
 
 <DocLayout title="快速开始 | lys 开源项目集合">
@@ -22,12 +22,35 @@ import { quickStart, projectGroups } from '../../data/site';
   <h2>技术栈</h2>
   <ul>
     <li><strong>移动端</strong>：Flutter（Smart BLE、Open IoT Platform 移动端）</li>
-    <li><strong>桌面端</strong>：Tauri + SvelteKit / Vue（RedisPilot、QueryLab、TermForge、Batch Image Studio）</li>
+    <li><strong>桌面端</strong>：Tauri + Svelte / React（RedisPilot、QueryLab、TermForge、Batch Image Studio）</li>
     <li><strong>服务端</strong>：Go（Open IoT Platform server）</li>
-    <li><strong>固件</strong>：ESP32 + C（Open IoT Platform firmware）</li>
+    <li><strong>固件</strong>：PlatformIO + Arduino on ESP32 / ESP32-S3（Open IoT Platform firmware）</li>
     <li><strong>小程序</strong>：微信小程序（Smart BLE 的 BLE Toolkit+）</li>
     <li><strong>macOS 原生</strong>：Swift（PaperMD）</li>
   </ul>
+
+  <h2>真实入口</h2>
+  <p>如果你不想先读完整文档，下面这两张卡片就是当前最合适的开始位置。</p>
+  <div class="visual-entry-grid">
+    {visualEntries.map((entry) => (
+      <article class="visual-entry-card">
+        <div class="visual-entry-main">
+          <span class="status-chip">{entry.badge}</span>
+          <h3>{entry.name}</h3>
+          <p>{entry.summary}</p>
+          <img class="visual-entry-shot" src={entry.image} alt={entry.name} loading="lazy" />
+          <div class="doc-project-links">
+            <a href={entry.primaryHref} target="_blank" rel="noreferrer">{entry.primaryLabel} →</a>
+            <a href={entry.secondaryHref} target="_blank" rel="noreferrer">{entry.secondaryLabel} →</a>
+          </div>
+        </div>
+        <div class="visual-entry-qr">
+          <img src={entry.qr} alt={entry.qrLabel} loading="lazy" />
+          <strong>{entry.qrLabel}</strong>
+        </div>
+      </article>
+    ))}
+  </div>
 
   <h2>推荐路径</h2>
   {quickStart.steps.map((step, index) => (
@@ -35,10 +58,21 @@ import { quickStart, projectGroups } from '../../data/site';
       <h3>步骤 {index + 1}：{step.title}</h3>
       <p>{step.description}</p>
       <p><a href={step.href} target={step.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer">
-        {step.href.startsWith('http') ? '打开仓库' : '查看页面'} →
+        {step.ctaLabel || (step.href.startsWith('http') ? '打开入口' : '查看页面')} →
       </a></p>
     </div>
   ))}
+
+  <h2>工具主线</h2>
+  <p>如果你对桌面工具更感兴趣，可以直接从下面三个入口进入。</p>
+  <div class="tool-visual-grid">
+    {toolVisuals.map((tool) => (
+      <a class="tool-visual-card" href={tool.href} target="_blank" rel="noreferrer">
+        <img src={tool.image} alt={tool.name} loading="lazy" />
+        <strong>{tool.name}</strong>
+      </a>
+    ))}
+  </div>
 
   <h2>接下来</h2>
   <ul>

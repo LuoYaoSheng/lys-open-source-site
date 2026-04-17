@@ -45,20 +45,23 @@ export const features = [
   {
     title: 'Smart BLE',
     description: '跨平台 BLE 调试工具，支持 Flutter、微信小程序和原生 iOS 多端实现。适合学习蓝牙协议、对比平台差异和理解设备通信。',
-    href: 'https://gitee.com/luoyaosheng/lys-smart-ble',
+    href: 'https://lightble.i2kai.com',
     tag: '核心',
+    ctaLabel: '打开项目站',
   },
   {
     title: 'Open IoT Platform',
     description: '从设备接入、BLE 配网到 MQTT 通信的端到端 IoT 平台，覆盖 Go 服务端、Flutter 移动端和 ESP32 固件。',
-    href: 'https://gitee.com/luoyaosheng/lys-iot-platform',
+    href: 'https://iot.open.i2kai.com',
     tag: '核心',
+    ctaLabel: '打开文档站',
   },
   {
     title: '开发者工具集',
     description: 'RedisPilot（Redis 管理）、QueryLab（数据库客户端）、TermForge（SSH 运维台）等 Tauri 桌面应用。',
     href: '/projects',
     tag: '工具',
+    ctaLabel: '浏览全部',
   },
 ];
 
@@ -68,20 +71,69 @@ export const quickStart = {
     {
       title: '体验 Smart BLE',
       description: '用微信扫小程序码（BLE Toolkit+），直接体验 BLE 扫描、连接、读写和广播功能，无需安装。',
-      href: 'https://gitee.com/luoyaosheng/lys-smart-ble',
+      href: 'https://lightble.i2kai.com',
+      ctaLabel: '打开项目站',
     },
     {
       title: '阅读技术指南',
       description: '从 BLE 抽象层设计、8 种跨平台方案对比到 ESP32 硬件实战，逐步深入理解。',
       href: '/docs/guides',
+      ctaLabel: '查看页面',
     },
     {
       title: '浏览全部项目',
       description: '按核心项目、开发者工具、创作效率等分类，找到你感兴趣的开源仓库。',
       href: '/projects',
+      ctaLabel: '浏览项目',
     },
   ],
 };
+
+// ── Visual Entry Cards ──
+export const visualEntries = [
+  {
+    name: 'Smart BLE',
+    badge: '扫码即用',
+    summary: '先扫码体验 BLE Toolkit+，再回头看文档和多平台实现，会比直接读仓库更快进入状态。',
+    image: '/projects/smart-ble/post-scan-click.png',
+    qr: '/projects/smart-ble/qr-code.jpg',
+    qrLabel: '微信扫码体验 BLE Toolkit+',
+    primaryHref: 'https://lightble.i2kai.com',
+    primaryLabel: '打开项目站',
+    secondaryHref: 'https://gitee.com/luoyaosheng/lys-smart-ble',
+    secondaryLabel: 'Gitee 仓库',
+  },
+  {
+    name: 'Open IoT Platform',
+    badge: '完整链路',
+    summary: '从设备接入、BLE 配网到 MQTT 控制的系统入口，适合在理解 Smart BLE 后继续深入 IoT 链路。',
+    image: '/projects/open-iot-platform/app-icon.png',
+    qr: '/projects/open-iot-platform/wechat-qrcode.jpg',
+    qrLabel: '扫码看配网入口',
+    primaryHref: 'https://iot.open.i2kai.com',
+    primaryLabel: '打开文档站',
+    secondaryHref: 'https://gitee.com/luoyaosheng/lys-iot-platform',
+    secondaryLabel: 'Gitee 仓库',
+  },
+];
+
+export const toolVisuals = [
+  {
+    name: 'RedisPilot',
+    image: '/projects/redispilot/icon.png',
+    href: 'https://redis.open.i2kai.com',
+  },
+  {
+    name: 'QueryLab',
+    image: '/projects/querylab/icon.png',
+    href: 'https://query.open.i2kai.com',
+  },
+  {
+    name: 'TermForge',
+    image: '/projects/termforge/icon.png',
+    href: 'https://term.open.i2kai.com',
+  },
+];
 
 // ── Guide Collections ──
 export const guideCollections = [
@@ -159,6 +211,9 @@ export const projectGroups = [
         status: '活跃',
         summary: '跨平台 BLE 调试工具，支持 Flutter、微信小程序和原生 iOS，提供统一的蓝牙调试和多平台实现参考。',
         repo: 'https://gitee.com/luoyaosheng/lys-smart-ble',
+        github: 'https://github.com/LuoYaoSheng/smart-ble',
+        docs: 'https://lightble.i2kai.com',
+        image: '/projects/smart-ble/post-scan-click.png',
       },
       {
         name: 'Open IoT Platform',
@@ -166,6 +221,9 @@ export const projectGroups = [
         status: '活跃',
         summary: '端到端 IoT 平台 — Go 服务端 + Flutter 移动端 + ESP32 固件，覆盖设备接入、BLE 配网、MQTT 通信和设备管理。',
         repo: 'https://gitee.com/luoyaosheng/lys-iot-platform',
+        github: 'https://github.com/LuoYaoSheng/open-iot-platform',
+        docs: 'https://iot.open.i2kai.com',
+        image: '/projects/open-iot-platform/app-icon.png',
       },
       {
         name: 'SerialTool',
@@ -178,7 +236,7 @@ export const projectGroups = [
   },
   {
     title: '开发者工具',
-    intro: '基于 Tauri + SvelteKit 构建的本地优先桌面应用，覆盖数据库管理、SSH 运维和开发工作流。',
+    intro: '基于 Tauri + Svelte 构建的本地优先桌面应用，覆盖数据库管理、SSH 运维和开发工作流。',
     items: [
       {
         name: 'RedisPilot',
@@ -186,6 +244,9 @@ export const projectGroups = [
         status: '活跃',
         summary: '本地优先的 Redis 桌面管理工具，支持 Key 浏览、数据查看和常用操作。',
         repo: 'https://gitee.com/luoyaosheng/lys-redis-pilot',
+        github: 'https://github.com/LuoYaoSheng/lys-redis-pilot',
+        docs: 'https://redis.open.i2kai.com',
+        image: '/projects/redispilot/icon.png',
       },
       {
         name: 'QueryLab',
@@ -193,6 +254,9 @@ export const projectGroups = [
         status: '活跃',
         summary: '本地优先的数据库客户端，当前聚焦 MySQL / MariaDB，支持 Schema 浏览和表数据操作。',
         repo: 'https://gitee.com/luoyaosheng/lys-query-lab',
+        github: 'https://github.com/LuoYaoSheng/lys-query-lab',
+        docs: 'https://query.open.i2kai.com',
+        image: '/projects/querylab/icon.png',
       },
       {
         name: 'TermForge',
@@ -200,6 +264,9 @@ export const projectGroups = [
         status: '活跃',
         summary: '跨平台 SSH / SFTP / Runbook 运维工作台，支持端口转发和命令自动化。',
         repo: 'https://gitee.com/luoyaosheng/lys-term-forge',
+        github: 'https://github.com/LuoYaoSheng/lys-term-forge',
+        docs: 'https://term.open.i2kai.com',
+        image: '/projects/termforge/icon.png',
       },
       {
         name: 'MCP DB Gateway',
@@ -229,6 +296,8 @@ export const projectGroups = [
         status: '活跃',
         summary: '原生 macOS Markdown 编辑器，追求极致输入体验。',
         repo: 'https://gitee.com/luoyaosheng/lys-paper-md',
+        github: 'https://github.com/LuoYaoSheng/lys-paper-md',
+        docs: 'https://paper.open.i2kai.com',
       },
       {
         name: 'Batch Image Studio',

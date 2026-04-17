@@ -1,7 +1,7 @@
 ---
 import LandingLayout from '../layouts/LandingLayout.astro';
 import '../styles/landing.css';
-import { features, quickStart, siteMeta } from '../data/site';
+import { features, quickStart, siteMeta, toolVisuals, visualEntries } from '../data/site';
 ---
 
 <LandingLayout title="lys 开源项目集合">
@@ -27,8 +27,36 @@ import { features, quickStart, siteMeta } from '../data/site';
           <h3>{feature.title}</h3>
           <p>{feature.description}</p>
           <a href={feature.href} target={feature.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer">
-            {feature.href.startsWith('http') ? '查看仓库' : '浏览全部'}
+            {feature.ctaLabel || (feature.href.startsWith('http') ? '打开入口' : '浏览全部')}
           </a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head" style="text-align: center;">
+      <span class="eyebrow">真实入口</span>
+      <h2>先看真实截图，再决定是否深入</h2>
+      <p>主线项目已经有可直接进入的截图和二维码，不需要先读完仓库结构再开始。</p>
+    </div>
+    <div class="visual-entry-grid">
+      {visualEntries.map((entry) => (
+        <article class="visual-entry-card">
+          <div class="visual-entry-main">
+            <span class="tag">{entry.badge}</span>
+            <h3>{entry.name}</h3>
+            <p>{entry.summary}</p>
+            <img class="visual-entry-shot" src={entry.image} alt={entry.name} loading="lazy" />
+            <div class="visual-entry-actions">
+              <a href={entry.primaryHref} target="_blank" rel="noreferrer">{entry.primaryLabel}</a>
+              <a href={entry.secondaryHref} target="_blank" rel="noreferrer">{entry.secondaryLabel}</a>
+            </div>
+          </div>
+          <div class="visual-entry-qr">
+            <img src={entry.qr} alt={entry.qrLabel} loading="lazy" />
+            <strong>{entry.qrLabel}</strong>
+          </div>
         </article>
       ))}
     </div>
@@ -45,8 +73,26 @@ import { features, quickStart, siteMeta } from '../data/site';
           <span class="tag">步骤 {index + 1}</span>
           <h3>{step.title}</h3>
           <p>{step.description}</p>
-          <a href={step.href}>{step.href.startsWith('http') ? '打开仓库' : '查看'}</a>
+          <a href={step.href} target={step.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer">
+            {step.ctaLabel || (step.href.startsWith('http') ? '打开入口' : '查看')}
+          </a>
         </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head" style="text-align: center;">
+      <span class="eyebrow">工具入口</span>
+      <h2>桌面工具主线</h2>
+      <p>数据库、Redis 和 SSH 运维这三条工具线已经有独立项目站入口。</p>
+    </div>
+    <div class="tool-visual-grid">
+      {toolVisuals.map((tool) => (
+        <a class="tool-visual-card" href={tool.href} target="_blank" rel="noreferrer">
+          <img src={tool.image} alt={tool.name} loading="lazy" />
+          <strong>{tool.name}</strong>
+        </a>
       ))}
     </div>
   </section>
