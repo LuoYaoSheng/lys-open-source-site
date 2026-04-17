@@ -1,11 +1,11 @@
 // ── Site Metadata ──
 export const siteMeta = {
   title: 'lys 开源项目集合',
-  description: '围绕 BLE、IoT 与开发者工具构建的开源项目集合，包含跨平台蓝牙调试、端到端物联网平台和实用桌面工具。',
+  description: '围绕 BLE、IoT、开发者工具与微信小程序构建的开源项目集合，包含跨平台蓝牙调试、端到端物联网平台和实用工具。',
   siteUrl: 'https://open.i2kai.com',
   siteName: 'lys Open Source',
   author: 'LuoYaoSheng',
-  keywords: '开源, BLE, IoT, Smart BLE, Open IoT Platform, RedisPilot, MQTT, 开发者工具, 蓝牙调试, 桌面工具',
+  keywords: '开源, BLE, IoT, Smart BLE, Open IoT Platform, RedisPilot, MQTT, 微信小程序, 恋恋决定, 开发者工具, 蓝牙调试, 桌面工具',
   themeColor: '#016FFF',
   repo: 'https://gitee.com/luoyaosheng',
   github: 'https://github.com/LuoYaoSheng',
@@ -215,6 +215,15 @@ export const projectGroups = [
     intro: '服务于写作、发布和资产生成的独立工具。',
     items: [
       {
+        name: '50 Apps Progress',
+        id: 'apps-progress',
+        status: '活跃',
+        summary: '2026 年 50 个应用计划的公开进度站，记录应用从想法、设计、开发到发布的年度交付过程。',
+        repo: 'https://gitee.com/luoyaosheng/lys-apps-progress',
+        github: 'https://github.com/LuoYaoSheng/lys-apps-progress',
+        docs: 'https://apps.open.i2kai.com',
+      },
+      {
         name: 'PaperMD',
         id: 'papermd',
         status: '活跃',
@@ -236,6 +245,8 @@ export const projectGroups = [
         status: '活跃',
         summary: '图标生成工具，服务于项目多尺寸图标和资产生成。',
         repo: 'https://gitee.com/luoyaosheng/lys-icon-gen',
+        github: 'https://github.com/LuoYaoSheng/lys-icon-gen',
+        docs: 'https://icon.open.i2kai.com',
       },
       {
         name: 'Log Clean',
@@ -243,6 +254,19 @@ export const projectGroups = [
         status: '活跃',
         summary: '日志清理工具，面向开发日志整理和 AI 协作前的数据清洗场景。',
         repo: 'https://gitee.com/luoyaosheng/lys-log-clean',
+      },
+    ],
+  },
+  {
+    title: '轻应用与小程序',
+    intro: '面向真实生活场景的轻量产品，用小程序形态验证完整体验。',
+    items: [
+      {
+        name: '恋恋决定',
+        id: 'lianlian-jueding',
+        status: '已上架',
+        summary: '情侣互动决策微信小程序，支持抽签、转盘、石头剪刀布、掷骰子、猜数字、猜颜色、任务清单和历史记录。',
+        repo: 'https://gitee.com/luoyaosheng/lianlian-jueding',
       },
     ],
   },
@@ -277,6 +301,16 @@ export const projectGroups = [
 
 // ── Changelog ──
 export const changelog = [
+  {
+    version: 'W16',
+    date: '2026-04-17',
+    title: '恋恋决定 v1.0.0 上架',
+    changes: [
+      '新增恋恋决定微信小程序项目入口',
+      '首个正式版聚焦情侣互动决策：抽签、转盘、石头剪刀布、掷骰子、猜数字和猜颜色',
+      '补齐任务清单、历史记录、音效反馈和全页面分享能力',
+    ],
+  },
   {
     version: 'W16',
     date: '2026-04-16',
